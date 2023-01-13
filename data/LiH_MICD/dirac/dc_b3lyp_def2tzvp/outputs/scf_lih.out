@@ -1,0 +1,4098 @@
+  ** interface to 32-bit integer MPI enabled **
+
+DIRAC master    (p1803) starts by allocating     1900000000 r*8 words (  14.156 GB) of memory
+DIRAC nodes 1 to 7 starts by allocating          1900000000 r*8 words (  14.156 GB) of memory
+DIRAC master    (p1803) to allocate at most      3900000000 r*8 words (  29.057 GB) of memory
+DIRAC nodes 1 to 7 to allocate at most           3900000000 r*8 words (  29.057 GB) of memory
+ 
+Note: maximum allocatable memory for master+nodes can be set by -aw (MW)/-ag (GB) flags in pam
+ 
+ *******************************************************************************
+ *                                                                             *
+ *                                O U T P U T                                  *
+ *                                   from                                      *
+ *                                                                             *
+ *                   @@@@@    @@   @@@@@     @@@@     @@@@@                    *
+ *                   @@  @@        @@  @@   @@  @@   @@                        *
+ *                   @@  @@   @@   @@@@@    @@@@@@   @@                        *
+ *                   @@  @@   @@   @@ @@    @@  @@   @@                        *
+ *                   @@@@@    @@   @@  @@   @@  @@    @@@@@                    *
+ *                                                                             *
+ *                                                                             *
+ %}ZS)S?$=$)]S?$%%>SS$%S$ZZ6cHHMHHHHHHHHMHHM&MHbHH6$L/:<S///</:|/:|:/::!:.::--:%
+ $?S$$%$$$$?%?$(SSS$SSSHMMMMMMMMMMMMMMMMMM6H&6S&SH&&k?6$r~::://///::::::.:::-::$
+ (%?)Z??$$$(S%$>$)S6HMMMMMMMMMMMMMMMMMMMMMMR6M]&&$6HR$&6(i::::::|i|:::::::-:-::(
+ $S?$$)$?$%?))?S/]#MMMMMMMMMMMMMMMMMMMMMMMMMMHM1HRH9R&$$$|):?:/://|:/::/:/.::.:$
+ SS$%%?$%((S)?Z[6MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM&HF$$&/)S?<~::!!:::::::/:-:|.S
+ SS%%%%S$%%%$$MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMHHHHHHM>?/S/:/:::`:/://:/::-::S
+ ?$SSSS?%SS$)MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/4?:S:/:::/:::/:/:::.::?
+ S$(S?S$%(?$HMMMMMMMMMMMMMMMMM#&7RH99MMMMMMMMMMMMMMMMMMHHHd$/:::::/::::::-//.:.S
+ (?SS(%)S&HMMMMMMMMMMMMMMMMM#S|///???$9HHMMMMMMMMMDSZ&1S/?</>?~:///::|/!:/-:-:.(
+ $S?%?<H(MMMMMMMMMMMMMMMMR?`. :.:`::<>:``?/*?##*)$:/>       `((%://::/:::::/::/$
+ S$($$)HdMMMMMMMMMMMMMMMP: . `   `  `    `      `-            `Z<:>?::/:::::|:iS
+ c%%%&HMMMMMMMMMMMMMMMM6:                                      `$%)>%%</>!:::::c
+ S?%/MMMMMMMMMMMMMMMMMMH-                                        /ZSS>?:?~:;/::S
+ $SZ?MMMMMMMMMMMMMMMMMH?.                                        \"&((/?//?|:::$
+ $%$%&MMMMMMMMMMMMMMMMM:.                                          ?%/S:</::/::$
+ ($?}&HMMMMMMMMMMMMMMMM>:                                          $%%<?/i:|i::(
+ Z$($&MMMMMMMMMMMMMMMMHk(:.  . -                                   .S/\?\?/!:/:Z
+ (??$<HMMMMMMMMMMMMMMMFk|:   -.-.                                  :%/%/(:/:ii|(
+ SZ(S?]MMMMMMMMMMMMMMHS?:- -  ::.:                                  |/S:</::?||S
+ $%)$$(MMMMMMMMMMMMMMR):`:. :.:::`,,/bcokb/_                       :S?%?|~:/:/:$
+ %$$%$)[[?$?MMMMMMMMMM: :.:-.::::$7?<&7&MMMMMMM#/           _ .. ..:</?:(:/::::%
+ $$$?Z?HHH~|/MMMMMMMMM/`.-.:.:/:%%%%?dHMMMMMMMMMMH?,-   .,bMMMM6//./i~/~:<:::/:$
+ $($S$M//::S?ZHMMMMMH/:.`:::.:/%S/&MMHMMMMMMMMRM&><   ,HMMMMMMMF  :::?:///:|:::$
+ )[$S$S($|_i:#>::*H&?/::.::/:\"://:?>>`:&HMHSMMMM$:`-   MMHMMMMHHT .)i/?////::/)
+ $$[$$>$}:dHH&$$--?S::-:.:::--/-:``./::>%Zi?)&/?`:.`   `H?$T*\" `  /%?>%:)://ii$
+ $&=&/ZS}$RF<:?/-.|%r/:::/:/:`.-.-..|::S//!`\"``          >??:    `SS<S:)!/////$
+ Z&]>b[Z(Z?&%:::../S$$:>:::i`.`. `-.`  `                         ,>%%%:>/>/!|:/Z
+ $$&/F&1$c$?>:>?/,>?$$ZS/::/:-: ...                              |S?S)S?<~:::::$
+ &$&$&$k&>>|?<:<?((/$[/?)i~/:/. - -                              S?:%%%?/:::/::&
+ =[/Z[[Fp[MMH$>?Z&S$$$/$S///||..-           -.-                  /((S$:%<:///:/=
+ $&>1MHHMMMM6M9MMMM$Z$}$S%/:::.`.            .:/,,,dcb>/:.       ((SSSS%:)!//i|$
+ MMMMMMMMMMMR&&RRRHR&&($(?:|i::-             .:%&S&$[&H&``     ../>%;/?>??:<::>M
+ MMMMMMMMMMMMS/}S$&&H&[$SS//:::.:.   . . .v</Jq1&&D]&M&<,      :/::/?%%)S>?://:M
+ MMMMMMMMMMMM?}$/$$kMM&&$(%/?//:..`.  .|//1d/`://?*/*/\"` `     .:/(SS$%(S%)):%M
+ MMMMMMMMMMMM(}$$>&&MMHR#$S%%:?::.:|-.`:;&&b/D/$p=qpv//b/~`   :/~~%%??$=$)Z$S+;M
+ MMMMMMMMMMMM[|S$$Z1]MMMMD[$?$:>)/::: :/?:``???bD&{b<<-`     .,:/)|SS(}Z/$$?/<SM
+ MMMMMMMMMMMM||$)&7k&MMMMH9]$$??Z%|!/:i::`  `` .             SS?SS?Z/]1$/&$c/$SM
+ MMMMMMMMMMMM| -?>[&]HMMMMMMMH1[/7SS(?:/..-` ::/Sc,/_,     _<$?SS%$S/&c&&$&>//<M
+ MMMMMMMMMMMMR  `$&&&HMM9MMMMMMM&&c$%%:/:/:.:.:/\?\?/\    _MMHk/7S/]dq&1S<&&></M
+ MMMMMMMMMMMMM?  :&96MHMMMMMMMMMMMHHk[S%(<<:// `         ,MMMMMMM&/Z6H]DkH]1$&&M
+ MMMMMMMMMMMMMD    99H9HMMMMMMMMMMMMMMMb&%$<:i.:....    .MMMMMMMMM6HHHRH&H&H1SFM
+ MMMMMMMMMMMMMM|   `?HMMMMMMMMMMMMMMMMMMMHk6k&>$&Z$/?_.bHMMMMMMMMMMM&6HRM9H6]ZkM
+ MMMMMMMMMMMMMMM/    `TMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMHMH6RH&R6&M
+ MMMMMMMMMMMMMMMM    -|?HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMFHH6HMD&&M
+ MMMMMMMMMMMMMMMMk  ..:~?9MMMMMMMMMMMMM#`:MMMMMMMMMMMMMMMMMMMMMMMMMMMMM9MHkR6&FM
+ MMMMMMMMMMMMMMMMM/  .-!:%$ZHMMMMMMMMMR` dMMMMMMMMMMMMMMMMMMMMMMMMMMMMM9MRMHH9&M
+ MMMMMMMMMMMMMMMMMML,:.-|::/?&&MMMMMM` .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMHRMH&&6M
+ MMMMMMMMMMMMMMMMMMMc%>/:::i<:SMMMMMMHdMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMHHM&969kM
+ MMMMMMMMMMMMMMMMMMMMSS/$$/(|HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMHH&HH&M
+ MMMMMMMMMMMMMMMMMMMM6S/?/MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMR96H1DR1M
+ MMMMMMMMMMMMMMMMMMMMM&$MHMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMHMH691&&M
+ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMH&R&9ZM
+ MMMMMMMMMMMMMMMMMMMMMMMMMRHMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMH&96][6M
+ MMMMMMMMMMMMMMMMMMMMMMMMp?:MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM96HH1][FM
+ MMMMMMMMMMMMMMMMMMMMMMMM> -HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMH&1k&$&M
+ *******************************************************************************
+ *                                                                             *
+ *         =========================================================           *
+ *                     Program for Atomic and Molecular                        *
+ *          Direct Iterative Relativistic All-electron Calculations            *
+ *         =========================================================           *
+ *                                                                             *
+ *                                                                             *
+ *    Written by:                                                              *
+ *                                                                             *
+ *    Hans Joergen Aa. Jensen  University of Southern Denmark    Denmark       *
+ *    Radovan Bast             UiT The Arctic University of      Norway        *
+ *    Andre S. P. Gomes        CNRS/Universite de Lille          France        *
+ *    Trond Saue               Universite Toulouse III           France        *
+ *    Lucas Visscher           Vrije Universiteit Amsterdam      Netherlands   *
+ *                                                                             *
+ *    with contributions from:                                                 *
+ *                                                                             *
+ *    Ignacio Agustin Aucar    CONICET/Northeastern University   Argentina     *
+ *    Vebjoern Bakken          University of Oslo                Norway        *
+ *    Chima Chibueze           Vrije Universiteit Amsterdam      Netherlands   *
+ *    Joel Creutzberg          University of Southern Denmark    Denmark       *
+ *    Kenneth G. Dyall         Schrodinger, Inc., Portland       USA           *
+ *    Sebastien Dubillard      University of Strasbourg          France        *
+ *    Ulf Ekstroem             University of Oslo                Norway        *
+ *    Ephraim Eliav            University of Tel Aviv            Israel        *
+ *    Thomas Enevoldsen        University of Southern Denmark    Denmark       *
+ *    Elke Fasshauer           University of Tubingen            Germany       *
+ *    Timo Fleig               Universite Toulouse III           France        *
+ *    Olav Fossgaard           UiT The Arctic University of      Norway        *
+ *    Loic Halbert             Universite de Lille               France        *
+ *    Erik D. Hedegaard        University of Southern Denmark    Denmark       *
+ *    Trygve Helgaker          University of Oslo                Norway        *
+ *    Benjamin Helmich-Paris   Max Planck Institute f. Coal Res. Germany       *
+ *    Johan Henriksson         Linkoeping University             Sweden        *
+ *    Martin van Horn          Universite Toulouse III           France        *
+ *    Miroslav Ilias           Matej Bel University              Slovakia      *
+ *    Christoph R. Jacob       TU Braunschweig                   Germany       *
+ *    Stefan Knecht            GSI Darmstadt/JGU Mainz           Germany       *
+ *    Stanislav Komorovsky     Slovak Academy of Sciences        Slovakia      *
+ *    Ossama Kullie            University of Kassel              Germany       *
+ *    Jon K. Laerdahl          University of Oslo                Norway        *
+ *    Christoffer V. Larsen    University of Southern Denmark    Denmark       *
+ *    Yoon Sup Lee             KAIST, Daejeon                    South Korea   *
+ *    Nanna Holmgaard List     Stockholm Inst. of Technology     Sweden        *
+ *    Huliyar S. Nataraj       BME/Budapest Univ. Tech. & Econ.  Hungary       *
+ *    Malaya Kumar Nayak       Bhabha Atomic Research Centre     India         *
+ *    Patrick Norman           Stockholm Inst. of Technology     Sweden        *
+ *    Malgorzata Olejniczak    University of Warsaw              Poland        *
+ *    Jeppe Olsen              Aarhus University                 Denmark       *
+ *    Jogvan Magnus H. Olsen   University of Southern Denmark    Denmark       *
+ *    Anastasios Papadopoulos  Max Planck Institute f. Coal Res. Germany       *
+ *    Young Choon Park         KAIST, Daejeon                    South Korea   *
+ *    Jesper K. Pedersen       University of Southern Denmark    Denmark       *
+ *    Markus Pernpointner      University of Heidelberg          Germany       *
+ *    Johann V. Pototschnig    Technical University Graz         Austria       *
+ *    Roberto Di Remigio       EuroCC National Competence Centre Sweden        *
+ *    Michal Repisky           UiT The Arctic University of      Norway        *
+ *    Kenneth Ruud             UiT The Arctic University of      Norway        *
+ *    Pawel Salek              Stockholm Inst. of Technology     Sweden        *
+ *    Bernd Schimmelpfennig    Karlsruhe Institute of Technology Germany       *
+ *    Bruno Senjean            CNRS/Universite de Montpellier    France        *
+ *    Avijit Shee              University of Berkeley            USA           *
+ *    Jetze Sikkema            Vrije Universiteit Amsterdam      Netherlands   *
+ *    Ayaki Sunaga             Kyoto University                  Japan         *
+ *    Andreas J. Thorvaldsen   UiT The Arctic University of      Norway        *
+ *    Joern Thyssen            University of Southern Denmark    Denmark       *
+ *    Joost N. P. van Stralen  Vrije Universiteit Amsterdam      Netherlands   *
+ *    Marta L. Vidal           Cardiff University                UK            *
+ *    Sebastien Villaume       Linkoeping University             Sweden        *
+ *    Olivier Visser           University of Groningen           Netherlands   *
+ *    Toke Winther             University of Southern Denmark    Denmark       *
+ *    Shigeyoshi Yamamoto      Chukyo University                 Japan         *
+ *    Xiang Yuan               Universite de Lille               France        *
+ *                                                                             *
+ *    For more information about the DIRAC code see http://diracprogram.org    *
+ *                                                                             *
+ *    This is an experimental code. The authors accept no responsibility       *
+ *    for the performance of the code or for the correctness of the results.   *
+ *                                                                             *
+ *    This program is free software; you can redistribute it and/or            *
+ *    modify it under the terms of the GNU Lesser General Public               *
+ *    License version 2.1 as published by the Free Software Foundation.        *
+ *                                                                             *
+ *    If results obtained with this code are published, an                     *
+ *    appropriate citation would be:                                           *
+ *                                                                             *
+ *    DIRAC, a relativistic ab initio electronic structure program,            *
+ *    Release DIRAC22 (2022), written by                                       *
+ *    H. J. Aa. Jensen, R. Bast, A. S. P. Gomes, T. Saue, and L. Visscher,     *
+ *    with contributions from I. A. Aucar, V. Bakken, C. Chibueze,             *
+ *    J. Creutzberg, K. G. Dyall, S. Dubillard, U. Ekstroem, E. Eliav,         *
+ *    T. Enevoldsen, E. Fasshauer, T. Fleig, O. Fossgaard, L. Halbert,         *
+ *    E. D. Hedegaard, T. Helgaker, J. Henriksson, M. van Horn, M. Ilias,      *
+ *    Ch. R. Jacob, S. Knecht, S. Komorovsky, O. Kullie, J. K. Laerdahl,       *
+ *    C. V. Larsen, Y. S. Lee, N. H. List, H. S. Nataraj, M. K. Nayak,         *
+ *    P. Norman, M. Olejniczak, J. Olsen, J. M. H. Olsen, A. Papadopoulos,     *
+ *    Y. C. Park, J. K. Pedersen, M. Pernpointner, J. V. Pototschnig,          *
+ *    R. Di Remigio, M. Repisky, K. Ruud, P. Salek, B. Schimmelpfennig,        *
+ *    B. Senjean, A. Shee, J. Sikkema, A. Sunaga, A. J. Thorvaldsen,           *
+ *    J. Thyssen, J. N. P. van Stralen, M. L. Vidal, S. Villaume,              *
+ *    O. Visser, T. Winther, S. Yamamoto and X. Yuan                           *
+ *    (see http://diracprogram.org).                                           *
+ *                                                                             *
+ *    as well as our reference paper: J. Chem. Phys. 152 (2020) 204104.        *
+ *                                                                             *
+ *******************************************************************************
+
+
+Version information
+-------------------
+
+Branch        | gosia/visual
+Commit hash   | 2330f11
+Commit author | gosia olejniczak
+Commit date   | Tue Apr 19 10:12:04 2022 +0200
+
+
+Configuration and build information
+-----------------------------------
+
+Who compiled             | plggosiao
+Compiled on server       | p0694
+Operating system         | Linux-3.10.0-1160.59.1.el7.x86_64
+CMake version            | 3.22.1
+CMake generator          | Unix Makefiles
+CMake build type         | release
+Configuration time       | 2022-04-21 08:21:03.826454
+Python version           | 3.7.9
+Fortran compiler         | /net/software/local/intel/impi/2018.5.288/bin64/mpiifort
+Fortran compiler version | 19.1
+Fortran compiler flags   |  -w -g -traceback -DVAR_IFORT  -qopenmp
+C compiler               | /net/software/local/intel/impi/2018.5.288/bin64/mpiicc
+C compiler version       | 19.1
+C compiler flags         |  -g -wd981 -wd279 -wd383 -wd1572 -wd177  -qopenmp
+C++ compiler             | /net/software/local/intel/impi/2018.5.288/bin64/mpiicpc
+C++ compiler version     | 19.1.1
+C++ compiler flags       |  -Wno-unknown-pragmas  -qopenmp
+Static linking           | False
+64-bit integers          | False
+MPI parallelization      | True
+MPI launcher             | /net/software/local/intel/impi/2018.5.288/bin64/mpiexec
+Math libraries           | unknown
+Builtin BLAS library     | OFF
+Builtin LAPACK library   | OFF
+Explicit libraries       | unknown
+Compile definitions      | HAVE_MKL_BLAS;HAVE_MKL_LAPACK;HAVE_MPI;HAVE_OPENMP;VAR_MPI;VAR_MPI2;USE_MPI_MOD_F90;SYS_LINUX;PRG_DIRAC;INSTALL_WRKMEM=64000000;BUILD_GEN1INT;HAS_PELIB;MOD_QCORR;HAS_STIELTJES;MOD_LAO_REARRANGED;MOD_MCSCF_spinfree;MOD_AOOSOC;MOD_ESR;MOD_KRCC;MOD_SRDFT;HAS_LAPLACE
+
+EXACORR dependencies
+--------------------
+Exatensor source repo    | unknown
+Exatensor git hash       | unknown
+Exatensor configuration  | unknown
+
+
+ LAPACK integer*4/8 selftest passed
+ Selftest of ISO_C_BINDING Fortran - C/C++ interoperability PASSED
+ MPI selftest passed with MPI_INTEGER of the size 4 bytes
+
+
+ * openMP activated,  thread limit - # processes - # threads: *****    1    1
+
+Execution time and host
+-----------------------
+
+ 
+     Date and time (Linux)  : Wed Aug 24 15:55:42 2022
+     Host name              : p1803                                   
+
+ * Opening HDF5 checkpoint file 
+    - DIRAC was compiled without hdf5, checkpointing is not possible
+
+
+Contents of the input file
+--------------------------
+
+**DIRAC                                                                                             
+.WAVE FUNCTION                                                                                      
+.ANALYZE                                                                                            
+**MOLECULE                                                                                          
+*SYMMETRY                                                                                           
+.NOSYM                                                                                              
+*BASIS                                                                                              
+.DEFAULT                                                                                            
+def2_tzvp                                                                                           
+**HAMILTONIAN                                                                                       
+.DFT                                                                                                
+B3LYP                                                                                               
+**INTEGRALS                                                                                         
+*READIN                                                                                             
+.UNCONTRACT                                                                                         
+**WAVE FUNCTION                                                                                     
+.SCF                                                                                                
+*SCF                                                                                                
+.EVCCNV                                                                                             
+1.0E-8  1.0D-6                                                                                      
+**ANALYZE                                                                                           
+.MULPOP                                                                                             
+*MULPOP                                                                                             
+.VECPOP                                                                                             
+all                                                                                                 
+.NETPOP                                                                                             
+.PRINT                                                                                              
+3                                                                                                   
+.LABEL                                                                                              
+ATOM                                                                                                
+*END OF                                                                                             
+
+
+Contents of the molecule file
+-----------------------------
+
+2                                                                                                   
+                                                                                                    
+Li    0.797500000     0.00000000    0.00000000                                                      
+H    -0.797500000     0.00000000    0.00000000                                                      
+
+
+    *************************************************************************
+    ********************* DIRAC: No title specified !!! *********************
+    *************************************************************************
+
+ Jobs in this run:
+   * Wave function
+   * Analysis
+
+
+    **************************************************************************
+    ************************** General DIRAC set-up **************************
+    **************************************************************************
+
+   CODATA Recommended Values of the Fundamental Physical Constants: 2018  
+             Peter J. Mohr, David B. Newell and Barry N. Taylor           
+         Reviews of Modern Physics, Vol. 93, 025010 (2021)                
+ * The speed of light :        137.0359992
+ * Running in four-component mode
+ * Parallel run with 7 slaves.
+ * Direct evaluation of the following two-electron integrals:
+   - LL-integrals
+   - SL-integrals
+   - SS-integrals
+   - GT-integrals
+ * Spherical transformation embedded in MO-transformation
+   for large components
+ * Transformation to scalar RKB basis embedded in
+   MO-transformation for small components
+ * Thresholds for linear dependence:
+   Large components:   1.00D-06
+   Small components:   1.00D-08
+ * General print level   :   0
+
+
+    *************************************************************************
+    ****************** Output from HERMIT input processing ******************
+    *************************************************************************
+
+ Default print level:        1
+ Using default nuclear model: Gaussian charge distribution.
+
+ Two-electron integrals not calculated.
+
+
+ Ordinary (field-free non-relativistic) Hamiltonian integrals not calculated.
+
+
+
+ Changes of defaults for *READIN
+ -------------------------------
+
+
+ Uncontracted basis forced, irrespective of basis input file.
+
+
+
+   ***************************************************************************
+   ****************** Output from MOLECULE input processing ******************
+   ***************************************************************************
+
+
+
+                          SYMGRP:Point group information
+                          ------------------------------
+
+Point group: C1 
+
+   * Character table
+
+        |  E 
+   -----+-----
+    A   |   1
+
+   * Direct product table
+
+        | A  
+   -----+-----
+    A   | A  
+
+
+                            **************************
+                            *** Output from DBLGRP ***
+                            **************************
+
+   * One fermion irrep:   E1 
+   * Quaternionic group. NZ = 4
+   * Direct product decomposition:
+          E1  x E1  : A   + A   + A   + A  
+
+
+                                 Spinor structure
+                                 ----------------
+
+
+   * Fermion irrep no.: 1
+      La  |  A  (1)  A  (1)  |
+      Sa  |  A  (1)  A  (1)  |
+      Lb  |  A  (1)  A  (1)  |
+      Sb  |  A  (1)  A  (1)  |
+
+
+                              Quaternion symmetries
+                              ---------------------
+
+    Rep  T(+)
+    -----------------------------
+    A    1  i  j  k
+
+  Nuclear repulsion energy                       :      0.995317638062 Hartree
+
+  Nuclear contribution to electric dipole moment :    3.014113168778    0.000000000000    0.000000000000 a.u.;  origin (0,0,0)
+
+
+  Atoms and basis sets
+  --------------------
+
+  Number of atom types :    2
+  Total number of atoms:    2
+
+  label    atoms   charge   prim    cont     basis   
+  ----------------------------------------------------------------------
+  Li          1       3      20      20      L  - [11s3p|11s3p]                                                  
+                             54      54      S  - [3s11p3d|3s11p3d]                                              
+  H           1       1       8       8      L  - [5s1p|5s1p]                                                    
+                             22      22      S  - [1s5p1d|1s5p1d]                                                
+  ----------------------------------------------------------------------
+                             28      28      L  - large components
+                             76      76      S  - small components
+  ----------------------------------------------------------------------
+  total:      2       4     104     104
+
+  Cartesian basis used.
+  Threshold for integrals (to be written to file):  1.00D-15
+
+
+  References for the basis sets
+  -----------------------------
+
+  Atom type   1   2
+   Reference not found in input                                                   
+
+
+  Cartesian Coordinates (bohr)
+  ----------------------------
+
+  Total number of coordinates:  6
+
+
+   1   Li       x      1.5070565844
+   2            y      0.0000000000
+   3            z      0.0000000000
+
+   4   H        x     -1.5070565844
+   5            y      0.0000000000
+   6            z      0.0000000000
+
+
+
+  Cartesian coordinates in XYZ format (Angstrom)
+  ----------------------------------------------
+
+    2
+ 
+Li     0.7975000000   0.0000000000   0.0000000000
+H     -0.7975000000   0.0000000000   0.0000000000
+
+
+   Interatomic separations (in Angstroms):
+   ---------------------------------------
+
+            Li          H   
+
+   Li      0.000000
+   H       1.595000    0.000000
+
+
+
+
+  Bond distances (angstroms):
+  ---------------------------
+
+                  atom 1     atom 2                           distance
+                  ------     ------                           --------
+  bond distance:    H          Li                             1.595000
+
+
+
+   Nuclear repulsion energy                          :    0.995317638062 Hartree
+   Nuclear contribution to electric dipole moment    :        3.01411317        0.00000000        0.00000000 a.u.
+
+                       * Total mass:     8.023830 amu
+                       * Natural abundance:  92.486 %
+
+
+* Center-of-mass coordinates (a.u.):       1.128471967775316   0.000000000000000   0.000000000000000
+* Center-of-mass coordinates (A)   :       0.597161648489562   0.000000000000000   0.000000000000000
+
+
+                                GETLAB: AO-labels
+                                -----------------
+
+   * Large components:    8
+     1  L Li  1 s        2  L Li  1 px       3  L Li  1 py       4  L Li  1 pz       5  L H   1 s        6  L H   1 px  
+     7  L H   1 py       8  L H   1 pz  
+   * Small components:   20
+     9  S Li  1 s       10  S Li  1 px      11  S Li  1 py      12  S Li  1 pz      13  S Li  1 dxx     14  S Li  1 dxy 
+    15  S Li  1 dxz     16  S Li  1 dyy     17  S Li  1 dyz     18  S Li  1 dzz     19  S H   1 s       20  S H   1 px  
+    21  S H   1 py      22  S H   1 pz      23  S H   1 dxx     24  S H   1 dxy     25  S H   1 dxz     26  S H   1 dyy 
+    27  S H   1 dyz     28  S H   1 dzz 
+
+
+  Symmetry Orbitals
+  -----------------
+
+  Number of orbitals in each symmetry:          104
+  Number of large orbitals in each symmetry:     28
+  Number of small orbitals in each symmetry:     76
+
+* Large component functions
+
+  Symmetry  A  ( 1)
+
+       11 functions:    Li s   
+        3 functions:    Li px  
+        3 functions:    Li py  
+        3 functions:    Li pz  
+        5 functions:    H  s   
+        1 functions:    H  px  
+        1 functions:    H  py  
+        1 functions:    H  pz  
+
+* Small component functions
+
+  Symmetry  A  ( 1)
+
+        3 functions:    Li s   
+       11 functions:    Li px  
+       11 functions:    Li py  
+       11 functions:    Li pz  
+        3 functions:    Li dxx 
+        3 functions:    Li dxy 
+        3 functions:    Li dxz 
+        3 functions:    Li dyy 
+        3 functions:    Li dyz 
+        3 functions:    Li dzz 
+        1 functions:    H  s   
+        5 functions:    H  px  
+        5 functions:    H  py  
+        5 functions:    H  pz  
+        1 functions:    H  dxx 
+        1 functions:    H  dxy 
+        1 functions:    H  dxz 
+        1 functions:    H  dyy 
+        1 functions:    H  dyz 
+        1 functions:    H  dzz 
+
+
+   ***************************************************************************
+   *************************** Hamiltonian defined ***************************
+   ***************************************************************************
+
+
+ One-electron operator origins:
+ - General operator origin (a.u.)       :   0.000000000000000   0.000000000000000   0.000000000000000
+ - Magnetic gauge origin (a.u.)         :   0.000000000000000   0.000000000000000   0.000000000000000
+ - Dipole (and multipole) origin (a.u.) :   0.000000000000000   0.000000000000000   0.000000000000000
+ * Print level:    0
+ * Dirac-Coulomb Hamiltonian
+ * SS integrals neglected:
+   Interatomic Coulombic SS-contributions modelled by
+   classical repulsion of small component atomic charges
+   using tabulated charges.
+ * Default integral flags passed to all modules
+   - LL-integrals:     1
+   - LS-integrals:     1
+   - SS-integrals:     0
+   - GT-integrals:     0
+
+
+ Information about the restricted kinetic balance scheme:
+ * Default RKB projection:
+   1: Pre-projection in scalar basis
+   2: Removal of unphysical solutions (via diagonalization of free particle Hamiltonian)
+  ===== Kohn-Sham calculation set-up =====
+ * DFT thresholds:
+   - small density threshold =  0.10000E-13
+ * Spin density contribution in response calculations:
+   - use the norm of the spin magnetization vector as a definition of the spin density (noncollinear definition)
+  ===== Numerical integration grid =====
+   - radial quadrature according to R. Lindh, P.-Aa. Malmqvist, and L. Gagliardi
+     precision of radial quadrature set to:  0.10000E-12
+   - angular quadrature using the Lebedev scheme, exact up to order L = 41
+
+
+    **************************************************************************
+    ************************** Wave function module **************************
+    **************************************************************************
+
+ Wave function types requested (in input order):
+     DFT       
+
+ Wave function jobs in execution order (expanded):
+ * Density functional calculation (Kohn-Sham method)
+
+ * Initial Automatic occupation based on:
+   Total charge of atoms =   4
+   Charge of molecule    =   0
+   i.e. no. of electrons =   4
+===========================================================================
+ *SCF: Set-up for Kohn-Sham calculation:
+===========================================================================
+ * Number of fermion irreps: 1
+ * Closed shell SCF calculation with     4 electrons in    2 orbitals.
+ * Sum of atomic potentials used for start guess
+ * General print level   :   0
+
+ ***** INITIAL TRIAL SCF FUNCTION *****
+ * Trial vectors read from file DFCOEF
+ * Scaling of active-active block correction to open shell Fock operator    0.500000
+   to improve convergence (default value).
+
+ ***** SCF CONVERGENCE CRITERIA *****
+ * Convergence on norm of error vector (gradient).
+   Desired convergence:1.000D-08
+   Allowed convergence:1.000D-06
+
+ ***** CONVERGENCE CONTROL *****
+ * Fock matrix constructed using differential density matrix
+    with optimal parameter.
+ * DIIS (in MO basis)
+ * DIIS will be activated when convergence reaches : 1.00D+20
+   - Maximum size of B-matrix:   10
+ * Damping of Fock matrix when DIIS is not activated. 
+   Weight of old matrix    : 0.250
+ * Maximum number of SCF iterations  :   50
+ * No quadratic convergent Hartree-Fock
+ * Contributions from 2-electron integrals to Fock matrix:
+   LL-integrals.
+   SL-integrals from iteration    1
+    ---> this is default setting from Hamiltonian input
+ ***** OUTPUT CONTROL *****
+ * Only electron eigenvalues written out.
+
+
+   ***************************************************************************
+   ***************************** Analysis module *****************************
+   ***************************************************************************
+
+ Jobs in this run:
+ * Mulliken population analysis
+===========================================================================
+ POPINP: Mulliken population analysis
+===========================================================================
+ * Gross populations
+ * Net populations and overlap
+ * Label defined for individual atoms
+ * Label definitions based on AO-labels
+ * Number of spinors analyzed:
+    - Orbitals in fermion ircop E1  :all                                                                     
+ * Print level:    3
+
+
+ ********************************************************************************
+ *************************** Input consistency checks ***************************
+ ********************************************************************************
+
+
+
+    *************************************************************************
+    ************************ End of input processing ************************
+    *************************************************************************
+
+
+
+                      Nuclear contribution to dipole moments
+                      --------------------------------------
+
+                               au             Debye
+
+                    x      3.01411317      7.66118243
+                    y      0.00000000      0.00000000
+                    z      0.00000000      0.00000000
+
+                        1 Debye =   2.54177000 a.u. 
+
+Total time used in ONEGEN (CPU)  0.00494900s and (WALL)  0.00760000s
+
+
+                       Generating Lowdin canonical matrix:
+                       -----------------------------------
+
+   L   A     * Deleted:          0(Proj:          0, Lindep:          0) Smin: 0.51E-02
+   S   A     * Deleted:          4(Proj:          4, Lindep:          0) Smin: 0.18E-01
+
+
+                                Output from MODHAM
+                                ------------------
+
+ * Applied strict kinetic balance !
+ * Applied SL-regrouping on AO2MO tranf.matrix in SLSORT.
+
+
+      **********************************************************************
+      ************************* Orbital dimensions *************************
+      **********************************************************************
+
+No. of positive energy orbitals (NESH):    28
+No. of negative energy orbitals (NPSH):    28
+Total no. of orbitals           (NORB):    56
+
+
+    *************************************************************************
+    ************************* Kohn-Sham calculation *************************
+    *************************************************************************
+
+
+*** INFO *** No trial vectors found.
+ Using sum of fitted atomic potentials as start potential.
+
+ Reference: S. Lehtola, L. Visscher, E. Engel,  J. Chem. Phys. 152 (2020) 144105. (small GRASP fit)
+
+
+########## START ITERATION NO.   1 ##########   Wed Aug 24 15:55:42 2022
+
+E_HOMO...E_LUMO, symmetry 1:                                 30  -0.35691   31  -0.07640
+
+=> Calculating sum of orbital energies
+It.    1    -3.529362242524      0.00D+00  0.00D+00  0.00D+00               0.01308700s   Atom. scrpot   Wed Aug 24
+
+########## START ITERATION NO.   2 ##########   Wed Aug 24 15:55:42 2022
+
+
+* GETGAB: label "GABAO1XX" not found; calling GABGEN.
+SCR        scr.thr.    Step1    Step2  Coulomb  Exchange   WALL-time
+SOfock:LL  1.00D-12    0.00%   61.02%    0.00%   13.45%   0.03580000s
+SOfock:SL  1.00D-12    0.00%   72.43%    0.00%    3.59%   0.01170000s
+
+
+ ********************************************************************************
+ ********************** Slater-Bragg atomic size estimates **********************
+ ********************************************************************************
+
+
+
+                        Slater-Bragg relative atomic sizes
+                        ----------------------------------
+
+
+               Column   1     Column   2
+       1       1.00000000     4.14285714
+       2       0.24137931     1.00000000
+    ==== End of matrix output ====
+
+DFTGRD: ATSIZE not requested or no trial vectors found. Slater-Bragg radii will be used.
+ 
+Atom  Deg   Rmin        Rmax        Step size     #rp     #tp
+=============================================================
+Li      1   0.781E-06   0.248E+02   0.123E+00     124   28856
+H       1   0.106E-04   0.131E+02   0.123E+00      97   29378
+
+   Number of grid points in quadrature:     58234 (100.0%)
+
+
+ >>>> Time used in DFTGRD:   0.11 seconds
+
+ 
+ DFT integration
+ 
+   number of grid points                          =     58234
+   DFT exchange-correlation energy:               =        -1.8747933357598174
+   number of electrons from numerical integration =         4.0000064086775131
+ 
+   time spent in DFT integration                  =   0.15 seconds
+   number of processors                           =         8
+ 
+E_HOMO...E_LUMO, symmetry 1:                                 30  -0.11130   31  -0.03144
+>>> Total wall time:  0.51850000s, and total CPU time :  0.49478500s
+
+########## END ITERATION NO.   2 ##########   Wed Aug 24 15:55:42 2022
+
+It.    2    -8.032829782608      4.50D+00 -2.05D+00  2.92D-01               0.51850000s   LL SL          Wed Aug 24
+
+########## START ITERATION NO.   3 ##########   Wed Aug 24 15:55:42 2022
+
+    3 *** Differential density matrix. DCOVLP     = 0.7251
+SCR        scr.thr.    Step1    Step2  Coulomb  Exchange   WALL-time
+SOfock:LL  1.00D-12    0.00%   61.08%    0.00%   13.18%   0.00820000s
+SOfock:SL  1.00D-12    0.00%   72.44%    0.00%    3.88%   0.00780000s
+ 
+ DFT integration
+ 
+   number of grid points                          =     58234
+   DFT exchange-correlation energy:               =        -1.7345787459244888
+   number of electrons from numerical integration =         4.0000028291513150
+ 
+   time spent in DFT integration                  =   0.15 seconds
+   number of processors                           =         8
+ 
+E_HOMO...E_LUMO, symmetry 1:                                 30  -0.20819   31  -0.04885
+>>> Total wall time:  0.28350000s, and total CPU time :  0.26437900s
+
+########## END ITERATION NO.   3 ##########   Wed Aug 24 15:55:43 2022
+
+It.    3    -8.051997771759      1.92D-02 -4.46D-01  1.69D-01   DIIS   2    0.28350000s   LL SL          Wed Aug 24
+
+########## START ITERATION NO.   4 ##########   Wed Aug 24 15:55:43 2022
+
+    4 *** Differential density matrix. DCOVLP     = 0.9229
+SCR        scr.thr.    Step1    Step2  Coulomb  Exchange   WALL-time
+SOfock:LL  1.00D-12    0.00%   61.20%    0.00%   13.17%   0.00880000s
+SOfock:SL  1.00D-12    0.00%   72.70%    0.00%    4.02%   0.00810000s
+ 
+ DFT integration
+ 
+   number of grid points                          =     58234
+   DFT exchange-correlation energy:               =        -1.8040159908456757
+   number of electrons from numerical integration =         4.0000046612571936
+ 
+   time spent in DFT integration                  =   0.15 seconds
+   number of processors                           =         8
+ 
+E_HOMO...E_LUMO, symmetry 1:                                 30  -0.19421   31  -0.04661
+>>> Total wall time:  0.28550000s, and total CPU time :  0.26739200s
+
+########## END ITERATION NO.   4 ##########   Wed Aug 24 15:55:43 2022
+
+It.    4    -8.073474068198      2.15D-02  2.21D-01  2.79D-02   DIIS   3    0.28550000s   LL SL          Wed Aug 24
+
+########## START ITERATION NO.   5 ##########   Wed Aug 24 15:55:43 2022
+
+    5 *** Differential density matrix. DCOVLP     = 0.9958
+SCR        scr.thr.    Step1    Step2  Coulomb  Exchange   WALL-time
+SOfock:LL  1.00D-12    0.00%   61.64%    0.00%   13.87%   0.01110000s
+SOfock:SL  1.00D-12    0.00%   73.32%    0.00%    4.55%   0.00780000s
+ 
+ DFT integration
+ 
+   number of grid points                          =     58234
+   DFT exchange-correlation energy:               =        -1.7950344647350966
+   number of electrons from numerical integration =         4.0000044271837378
+ 
+   time spent in DFT integration                  =   0.15 seconds
+   number of processors                           =         8
+ 
+E_HOMO...E_LUMO, symmetry 1:                                 30  -0.19341   31  -0.04585
+>>> Total wall time:  0.28670000s, and total CPU time :  0.26962700s
+
+########## END ITERATION NO.   5 ##########   Wed Aug 24 15:55:43 2022
+
+It.    5    -8.074005107318      5.31D-04 -2.82D-02  1.58D-03   DIIS   4    0.28670000s   LL SL          Wed Aug 24
+
+########## START ITERATION NO.   6 ##########   Wed Aug 24 15:55:43 2022
+
+    6 *** Differential density matrix. DCOVLP     = 0.9996
+SCR        scr.thr.    Step1    Step2  Coulomb  Exchange   WALL-time
+SOfock:LL  1.00D-12    0.00%   62.77%    0.00%   14.03%   0.01140000s
+SOfock:SL  1.00D-12    0.00%   74.47%    0.00%    5.54%   0.00730000s
+ 
+ DFT integration
+ 
+   number of grid points                          =     58234
+   DFT exchange-correlation energy:               =        -1.7946934076942320
+   number of electrons from numerical integration =         4.0000044207575458
+ 
+   time spent in DFT integration                  =   0.15 seconds
+   number of processors                           =         8
+ 
+E_HOMO...E_LUMO, symmetry 1:                                 30  -0.19332   31  -0.04575
+>>> Total wall time:  0.28590000s, and total CPU time :  0.26938000s
+
+########## END ITERATION NO.   6 ##########   Wed Aug 24 15:55:43 2022
+
+It.    6    -8.074006492674      1.39D-06 -9.30D-04  2.15D-04   DIIS   5    0.28590000s   LL SL          Wed Aug 24
+
+########## START ITERATION NO.   7 ##########   Wed Aug 24 15:55:43 2022
+
+    7 *** Differential density matrix. DCOVLP     = 0.9999
+SCR        scr.thr.    Step1    Step2  Coulomb  Exchange   WALL-time
+SOfock:LL  1.00D-12    0.00%   63.58%    0.00%   13.88%   0.01190000s
+SOfock:SL  1.00D-12    0.00%   75.64%    0.00%    6.08%   0.00770000s
+ 
+ DFT integration
+ 
+   number of grid points                          =     58234
+   DFT exchange-correlation energy:               =        -1.7946675575536890
+   number of electrons from numerical integration =         4.0000044194614253
+ 
+   time spent in DFT integration                  =   0.15 seconds
+   number of processors                           =         8
+ 
+E_HOMO...E_LUMO, symmetry 1:                                 30  -0.19331   31  -0.04571
+>>> Total wall time:  0.32550000s, and total CPU time :  0.27082500s
+
+########## END ITERATION NO.   7 ##########   Wed Aug 24 15:55:44 2022
+
+It.    7    -8.074006540393      4.77D-08 -1.21D-04  2.72D-05   DIIS   6    0.32550000s   LL SL          Wed Aug 24
+
+########## START ITERATION NO.   8 ##########   Wed Aug 24 15:55:44 2022
+
+    8 *** Differential density matrix. DCOVLP     = 1.0000
+SCR        scr.thr.    Step1    Step2  Coulomb  Exchange   WALL-time
+SOfock:LL  1.00D-12    0.00%   64.97%    0.00%   14.84%   0.01270000s
+SOfock:SL  1.00D-12    0.00%   76.95%    0.00%    6.15%   0.00780000s
+ 
+ DFT integration
+ 
+   number of grid points                          =     58234
+   DFT exchange-correlation energy:               =        -1.7946641901098230
+   number of electrons from numerical integration =         4.0000044193671700
+ 
+   time spent in DFT integration                  =   0.16 seconds
+   number of processors                           =         8
+ 
+E_HOMO...E_LUMO, symmetry 1:                                 30  -0.19331   31  -0.04570
+>>> Total wall time:  0.50020000s, and total CPU time :  0.27625400s
+
+########## END ITERATION NO.   8 ##########   Wed Aug 24 15:55:44 2022
+
+It.    8    -8.074006541599      1.21D-09 -1.23D-05  5.72D-06   DIIS   7    0.50020000s   LL SL          Wed Aug 24
+
+########## START ITERATION NO.   9 ##########   Wed Aug 24 15:55:44 2022
+
+    9 *** Differential density matrix. DCOVLP     = 1.0000
+SCR        scr.thr.    Step1    Step2  Coulomb  Exchange   WALL-time
+SOfock:LL  1.00D-12    0.00%   66.27%    0.00%   14.95%   0.01030000s
+SOfock:SL  1.00D-12    0.00%   78.37%    0.00%    5.95%   0.00740000s
+ 
+ DFT integration
+ 
+   number of grid points                          =     58234
+   DFT exchange-correlation energy:               =        -1.7946644585146267
+   number of electrons from numerical integration =         4.0000044193422930
+ 
+   time spent in DFT integration                  =   0.15 seconds
+   number of processors                           =         8
+ 
+E_HOMO...E_LUMO, symmetry 1:                                 30  -0.19331   31  -0.04570
+>>> Total wall time:  0.28450000s, and total CPU time :  0.26814400s
+
+########## END ITERATION NO.   9 ##########   Wed Aug 24 15:55:45 2022
+
+It.    9    -8.074006541643      4.45D-11  1.81D-06  6.62D-07   DIIS   8    0.28450000s   LL SL          Wed Aug 24
+
+########## START ITERATION NO.  10 ##########   Wed Aug 24 15:55:45 2022
+
+   10 *** Differential density matrix. DCOVLP     = 1.0000
+SCR        scr.thr.    Step1    Step2  Coulomb  Exchange   WALL-time
+SOfock:LL  1.00D-12    0.00%   70.23%    0.01%   17.23%   0.01060000s
+SOfock:SL  1.00D-12    0.00%   82.93%    0.00%    5.77%   0.00750000s
+ 
+ DFT integration
+ 
+   number of grid points                          =     58234
+   DFT exchange-correlation energy:               =        -1.7946642402942490
+   number of electrons from numerical integration =         4.0000044193363378
+ 
+   time spent in DFT integration                  =   0.15 seconds
+   number of processors                           =         8
+ 
+E_HOMO...E_LUMO, symmetry 1:                                 30  -0.19331   31  -0.04570
+>>> Total wall time:  0.28460000s, and total CPU time :  0.26824800s
+
+########## END ITERATION NO.  10 ##########   Wed Aug 24 15:55:45 2022
+
+It.   10    -8.074006541644      2.66D-13 -6.61D-07  1.15D-08   DIIS   9    0.28460000s   LL SL          Wed Aug 24
+
+########## START ITERATION NO.  11 ##########   Wed Aug 24 15:55:45 2022
+
+   11 *** Differential density matrix. DCOVLP     = 1.0000
+SCR        scr.thr.    Step1    Step2  Coulomb  Exchange   WALL-time
+SOfock:LL  1.00D-12    0.00%   76.37%    0.03%   13.31%   0.01070000s
+SOfock:SL  1.00D-12    0.00%   87.30%    0.00%    7.14%   0.00740000s
+ 
+ DFT integration
+ 
+   number of grid points                          =     58234
+   DFT exchange-correlation energy:               =        -1.7946642393396952
+   number of electrons from numerical integration =         4.0000044193362703
+ 
+   time spent in DFT integration                  =   0.15 seconds
+   number of processors                           =         8
+ 
+>>> Total wall time:  0.28000000s, and total CPU time :  0.26436800s
+
+########## END ITERATION NO.  11 ##########   Wed Aug 24 15:55:45 2022
+
+It.   11    -8.074006541644      1.07D-13 -5.60D-09  6.89D-10   DIIS   9    0.28000000s   LL SL          Wed Aug 24
+
+
+                                   SCF - CYCLE
+                                   -----------
+
+* Convergence on norm of error vector (gradient).
+  Desired convergence:1.000D-08
+  Allowed convergence:1.000D-06
+
+* ERGVAL - convergence in total energy
+* FCKVAL - convergence in maximum change in total Fock matrix
+* EVCVAL - convergence in error vector (gradient)
+--------------------------------------------------------------------------------------------------------------------------------
+           Energy               ERGVAL    FCKVAL    EVCVAL      Conv.acc    CPU          Integrals   Time stamp
+--------------------------------------------------------------------------------------------------------------------------------
+It.    1    -3.529362242524      0.00D+00  0.00D+00  0.00D+00               0.01308700s   Atom. scrpot   Wed Aug 24
+It.    2    -8.032829782608      4.50D+00 -2.05D+00  2.92D-01               0.51850000s   LL SL          Wed Aug 24
+It.    3    -8.051997771759      1.92D-02 -4.46D-01  1.69D-01   DIIS   2    0.28350000s   LL SL          Wed Aug 24
+It.    4    -8.073474068198      2.15D-02  2.21D-01  2.79D-02   DIIS   3    0.28550000s   LL SL          Wed Aug 24
+It.    5    -8.074005107318      5.31D-04 -2.82D-02  1.58D-03   DIIS   4    0.28670000s   LL SL          Wed Aug 24
+It.    6    -8.074006492674      1.39D-06 -9.30D-04  2.15D-04   DIIS   5    0.28590000s   LL SL          Wed Aug 24
+It.    7    -8.074006540393      4.77D-08 -1.21D-04  2.72D-05   DIIS   6    0.32550000s   LL SL          Wed Aug 24
+It.    8    -8.074006541599      1.21D-09 -1.23D-05  5.72D-06   DIIS   7    0.50020000s   LL SL          Wed Aug 24
+It.    9    -8.074006541643      4.45D-11  1.81D-06  6.62D-07   DIIS   8    0.28450000s   LL SL          Wed Aug 24
+It.   10    -8.074006541644      2.66D-13 -6.61D-07  1.15D-08   DIIS   9    0.28460000s   LL SL          Wed Aug 24
+It.   11    -8.074006541644      1.07D-13 -5.60D-09  6.89D-10   DIIS   9    0.28000000s   LL SL          Wed Aug 24
+--------------------------------------------------------------------------------------------------------------------------------
+* Convergence after   11 iterations.
+* Average elapsed time per iteration: 
+      No 2-ints    :    0.02880000s
+      LL SL        :    0.33349000s
+
+
+                                   TOTAL ENERGY
+                                   ------------
+
+   Electronic energy                        :    -9.0693241805682874
+
+   Other contributions to the total energy
+   Nuclear repulsion energy                 :     0.9953176380620689
+   SS Coulombic correction                  :     0.0000000008626086
+
+   Sum of all contributions to the energy
+   Total energy                             :    -8.0740065416436106
+
+
+                                   Eigenvalues
+                                   -----------
+
+
+* Fermion symmetry E1 
+  * Closed shell, f = 1.0000
+   -2.001942727462  ( 2)      -0.193307478903  ( 2)
+  * Virtual eigenvalues, f = 0.0000
+   -0.045700728957  ( 2)       0.010706409309  ( 2)       0.010709629820  ( 2)       0.073535639152  ( 2)       0.135610301641  ( 2)
+    0.367003782248  ( 2)       0.487897883889  ( 2)       0.487933239920  ( 2)       0.562849504916  ( 2)       1.075752969816  ( 2)
+    1.547708344173  ( 2)       1.547745311116  ( 2)       1.826935314472  ( 2)       2.089764280655  ( 2)       5.212703759111  ( 2)
+    5.798340961149  ( 2)       5.799253887501  ( 2)       5.910851753741  ( 2)       9.632317534559  ( 2)      16.629250155275  ( 2)
+   49.240600915458  ( 2)      61.349755398796  ( 2)     151.586308544276  ( 2)     514.502713981063  ( 2)    2023.603139466817  ( 2)
+ 9796.424183235416  ( 2)
+* HOMO - LUMO gap:
+
+    E(LUMO) :    -0.04570073 au (symmetry E1 )
+  - E(HOMO) :    -0.19330748 au (symmetry E1 )
+  ------------------------------------------
+    gap     :     0.14760675 au
+
+
+
+    **************************************************************************
+    ********************** Mulliken population analysis **********************
+    **************************************************************************
+
+
+
+                         Output from GETPLB: Group labels
+                         --------------------------------
+
+* Total number :     4
+     1  L Li  1          2  L H   1          3  Li  1 _small     4  H   1 _small
+
+
+                                 Fermion ircop E1
+                                 ----------------
+
+ vecpop : 
+ all                                                                     
+
+
+                                 Fermion ircop E1
+                                 ----------------
+
+
+* Positronic eigenvalue no.   1: -47970.917207145       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.4506
+      beta-part :   0.5494
+   POPMAT: labels    4
+      Sum alpha-part:   0.4506
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.17586694    -0.00000051     0.00000000     0.00000000
+       2      -0.00000051     0.00000051     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.27471119    -0.00000000
+    ==== End of matrix output ====
+      Sum beta-part :   0.5494
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.54942239    -0.00000000
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        Li  1 _small
+-----------------------------------------------------
+ alpha    0.4506  |      0.1759         0.2747
+ beta     0.5494  |      0.0000         0.5494
+
+* Gross populations (all):
+L Li  1       1.75866422E-01  1.24166553E-23
+L H   1       1.97636100E-10  1.93482230E-24
+Li  1 _small  2.74711192E-01  5.49422385E-01
+H   1 _small  2.51476087E-11  1.93551570E-11
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.1759         0.0000
+Li  1 _small                 0.2747
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.5494
+
+* Positronic eigenvalue no.   2: -39795.101558535       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.3676
+      beta-part :   0.6324
+   POPMAT: labels    4
+      Sum alpha-part:   0.3676
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.05139024    -0.00000102     0.00000000     0.00000000
+       2      -0.00000102     0.00000102     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.31620360    -0.00000000
+    ==== End of matrix output ====
+      Sum beta-part :   0.6324
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.63240719    -0.00000001
+       4       0.00000000     0.00000000    -0.00000001     0.00000001
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        Li  1 _small
+-----------------------------------------------------
+ alpha    0.3676  |      0.0514         0.3162
+ beta     0.6324  |      0.0000         0.6324
+
+* Gross populations (all):
+L Li  1       5.13892214E-02  5.62127780E-20
+L H   1      -1.32689168E-10  2.28227583E-21
+Li  1 _small  3.16203594E-01  6.32407183E-01
+H   1 _small  1.05610721E-09  7.97961739E-10
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.0514         0.0000
+Li  1 _small                 0.3162
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.6324
+
+* Positronic eigenvalue no.   3: -38164.727215022       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.3431
+      beta-part :   0.6569
+   POPMAT: labels    4
+      Sum alpha-part:   0.3431
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.01470892    -0.00000128     0.00000000     0.00000000
+       2      -0.00000128     0.00000128     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.32843083    -0.00000002
+       4       0.00000000     0.00000000    -0.00000002     0.00000004
+    ==== End of matrix output ====
+      Sum beta-part :   0.6569
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.65686166    -0.00000013
+       4       0.00000000     0.00000000    -0.00000013     0.00000015
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        Li  1 _small
+-----------------------------------------------------
+ alpha    0.3431  |      0.0147         0.3284
+ beta     0.6569  |      0.0000         0.6569
+
+* Gross populations (all):
+L Li  1       1.47076371E-02  7.16923653E-18
+L H   1       6.61166972E-10  5.74611875E-19
+Li  1 _small  3.28430801E-01  6.56861528E-01
+H   1 _small  1.81500012E-08  1.45856684E-08
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.0147         0.0000
+Li  1 _small                 0.3284
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.6569
+
+* Positronic eigenvalue no.   4: -37753.241885066       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.3365
+      beta-part :   0.6635
+   POPMAT: labels    4
+      Sum alpha-part:   0.3365
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00468779    -0.00000142     0.00000000     0.00000000
+       2      -0.00000142     0.00000143     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.33177163    -0.00000026
+       4       0.00000000     0.00000000    -0.00000026     0.00000046
+    ==== End of matrix output ====
+      Sum beta-part :   0.6635
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.66354336    -0.00000144
+       4       0.00000000     0.00000000    -0.00000144     0.00000159
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        Li  1 _small
+-----------------------------------------------------
+ alpha    0.3365  |      0.0047         0.3318
+ beta     0.6635  |      0.0000         0.6635
+
+* Gross populations (all):
+L Li  1       4.68636443E-03  1.05043338E-15
+L H   1       1.53142887E-09  6.01053186E-17
+Li  1 _small  3.31771369E-01  6.63541917E-01
+H   1 _small  2.01893668E-07  1.45267778E-07
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.0047         0.0000
+Li  1 _small                 0.3318
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.6635
+
+* Positronic eigenvalue no.   5: -37633.339248412       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.3346
+      beta-part :   0.6654
+   POPMAT: labels    4
+      Sum alpha-part:   0.3346
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00001177    -0.00001172     0.00000000     0.00000000
+       2      -0.00001172     0.00186337     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00001513    -0.00000382
+       4       0.00000000     0.00000000    -0.00000382     0.33271177
+    ==== End of matrix output ====
+      Sum beta-part :   0.6654
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.00003563    -0.00001518
+       4       0.00000000     0.00000000    -0.00001518     0.66542375
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L H   1        H   1 _small
+-----------------------------------------------------
+ alpha    0.3346  |      0.0019         0.3327
+ beta     0.6654  |      0.0000         0.6654
+
+* Gross populations (all):
+L Li  1       5.62767506E-08  4.71862733E-15
+L H   1       1.85165655E-03  1.74212392E-15
+Li  1 _small  1.13126627E-05  2.04498292E-05
+H   1 _small  3.32707953E-01  6.65408571E-01
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L H   1        H   1 _small
+--------------------------------------
+L H   1       0.0019         0.0000
+H   1 _small                 0.3327
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.H   1 _small
+-----------------------
+H   1 _small  0.6654
+
+* Positronic eigenvalue no.   6: -37628.786546021       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.3344
+      beta-part :   0.6656
+   POPMAT: labels    4
+      Sum alpha-part:   0.3344
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00165844    -0.00000156     0.00000000     0.00000000
+       2      -0.00000156     0.00000162     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.33277406    -0.00000193
+       4       0.00000000     0.00000000    -0.00000193     0.00001356
+    ==== End of matrix output ====
+      Sum beta-part :   0.6656
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.66554904    -0.00001118
+       4       0.00000000     0.00000000    -0.00001118     0.00003264
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        Li  1 _small
+-----------------------------------------------------
+ alpha    0.3344  |      0.0017         0.3328
+ beta     0.6656  |      0.0000         0.6655
+
+* Gross populations (all):
+L Li  1       1.65687195E-03  1.99245554E-13
+L H   1       5.74435255E-08  3.75772049E-15
+Li  1 _small  3.32772126E-01  6.65537860E-01
+H   1 _small  1.16262938E-05  2.14577303E-05
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.0017         0.0000
+Li  1 _small                 0.3328
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.6655
+
+* Positronic eigenvalue no.   7: -37585.565374048       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.3338
+      beta-part :   0.6662
+   POPMAT: labels    4
+      Sum alpha-part:   0.3338
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00063016    -0.00000167     0.00000000     0.00000000
+       2      -0.00000167     0.00000169     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.33314616    -0.00001352
+       4       0.00000000     0.00000000    -0.00001352     0.00002719
+    ==== End of matrix output ====
+      Sum beta-part :   0.6662
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.66630595    -0.00008844
+       4       0.00000000     0.00000000    -0.00008844     0.00009612
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        Li  1 _small
+-----------------------------------------------------
+ alpha    0.3338  |      0.0006         0.3331
+ beta     0.6662  |      0.0000         0.6662
+
+* Gross populations (all):
+L Li  1       6.28483533E-04  1.07843351E-10
+L H   1       1.47079359E-08  1.63016404E-13
+Li  1 _small  3.33132636E-01  6.66217515E-01
+H   1 _small  1.36677525E-05  7.68287012E-06
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.0006         0.0000
+Li  1 _small                 0.3331
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.6663
+
+* Positronic eigenvalue no.   8: -37575.035426064       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.0002
+      beta-part :   0.9998
+   POPMAT: labels    4
+      Sum alpha-part:   0.0002
+
+               Column   1     Column   2     Column   3     Column   4
+       1     1.594764E-04  -9.368859E-07   0.000000E+00   0.000000E+00
+       2    -9.368859E-07   9.830428E-07   0.000000E+00   0.000000E+00
+       3     0.000000E+00   0.000000E+00   2.781049E-05  -9.601590E-06
+       4     0.000000E+00   0.000000E+00  -9.601590E-06   6.623133E-05
+    ==== End of matrix output ====
+      Sum beta-part :   0.9998
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00007795    -0.00000001     0.00000000     0.00000000
+       2      -0.00000001     0.00000001     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.99976930    -0.00013125
+       4       0.00000000     0.00000000    -0.00013125     0.00018184
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        Li  1 _small   H   1 _small
+--------------------------------------------------------------------
+ alpha    0.0002  |      0.0002         0.0000         0.0001
+ beta     0.9998  |      0.0001         0.9996         0.0001
+
+* Gross populations (all):
+L Li  1       1.58539496E-04  7.79336559E-05
+L H   1       4.61568961E-08  1.21327818E-09
+Li  1 _small  1.82088970E-05  9.99638048E-01
+H   1 _small  5.66297437E-05  5.05933165E-05
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1     
+-----------------------
+L Li  1       0.0002
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.9998
+
+* Positronic eigenvalue no.   9: -37571.651158786       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.3336
+      beta-part :   0.6664
+   POPMAT: labels    4
+      Sum alpha-part:   0.3336
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00001412    -0.00001404     0.00000000     0.00000000
+       2      -0.00001404     0.00033978     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00023294    -0.00012524
+       4       0.00000000     0.00000000    -0.00012524     0.33333802
+    ==== End of matrix output ====
+      Sum beta-part :   0.6664
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.00065268    -0.00049164
+       4       0.00000000     0.00000000    -0.00049164     0.66668430
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L H   1        Li  1 _small   H   1 _small
+--------------------------------------------------------------------
+ alpha    0.3336  |      0.0003         0.0001         0.3332
+ beta     0.6664  |      0.0000         0.0002         0.6662
+
+* Gross populations (all):
+L Li  1       8.36265419E-08  4.36254744E-11
+L H   1       3.25737243E-04  5.59497574E-13
+Li  1 _small  1.07699818E-04  1.61042332E-04
+H   1 _small  3.33212779E-01  6.66192658E-01
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L H   1        Li  1 _small   H   1 _small
+-----------------------------------------------------
+L H   1       0.0003         0.0000         0.0000
+Li  1 _small                 0.0002        -0.0003
+H   1 _small                                0.3333
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.0007        -0.0010
+H   1 _small                 0.6667
+
+* Positronic eigenvalue no.  10: -37568.988976813       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.3082
+      beta-part :   0.6918
+   POPMAT: labels    4
+      Sum alpha-part:   0.3082
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00021383    -0.00000382     0.00000000     0.00000000
+       2      -0.00000382     0.00000401     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.30807680    -0.00030833
+       4       0.00000000     0.00000000    -0.00030833     0.00051279
+    ==== End of matrix output ====
+      Sum beta-part :   0.6918
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00003098    -0.00000001     0.00000000     0.00000000
+       2      -0.00000001     0.00000001     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.69283537    -0.00159778
+       4       0.00000000     0.00000000    -0.00159778     0.00214606
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        Li  1 _small   H   1 _small
+--------------------------------------------------------------------
+ alpha    0.3082  |      0.0002         0.3078         0.0002
+ beta     0.6918  |      0.0000         0.6912         0.0005
+
+* Gross populations (all):
+L Li  1       2.10015119E-04  3.09758768E-05
+L H   1       1.93781624E-07  2.16633771E-09
+Li  1 _small  3.07768473E-01  6.91237590E-01
+H   1 _small  2.04463296E-04  5.48286551E-04
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        Li  1 _small   H   1 _small
+-----------------------------------------------------
+L Li  1       0.0002         0.0000         0.0000
+Li  1 _small                 0.3081        -0.0006
+H   1 _small                                0.0005
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.6928        -0.0032
+H   1 _small                 0.0021
+
+* Positronic eigenvalue no.  11: -37568.899265420       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.5000
+      beta-part :   0.5000
+   POPMAT: labels    4
+      Sum alpha-part:   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00011909    -0.00000003     0.00000000     0.00000000
+       2      -0.00000003     0.00000003     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.49986933    -0.00000459
+       4       0.00000000     0.00000000    -0.00000459     0.00002079
+    ==== End of matrix output ====
+      Sum beta-part :   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00011909    -0.00000003     0.00000000     0.00000000
+       2      -0.00000003     0.00000003     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.49986933    -0.00000459
+       4       0.00000000     0.00000000    -0.00000459     0.00002079
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        Li  1 _small
+-----------------------------------------------------
+ alpha    0.5000  |      0.0001         0.4999
+ beta     0.5000  |      0.0001         0.4999
+
+* Gross populations (all):
+L Li  1       1.19060071E-04  1.19060071E-04
+L H   1       4.61119252E-09  4.61119252E-09
+Li  1 _small  4.99864739E-01  4.99864738E-01
+H   1 _small  1.61967641E-05  1.61967643E-05
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.0001         0.0000
+Li  1 _small                 0.4999
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.0001         0.0000
+Li  1 _small                 0.4999
+
+* Positronic eigenvalue no.  12: -37568.858740624       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.3257
+      beta-part :   0.6743
+   POPMAT: labels    4
+      Sum alpha-part:   0.3257
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00023208    -0.00000077     0.00000000     0.00000000
+       2      -0.00000077     0.00000080     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.32539319    -0.00001148
+       4       0.00000000     0.00000000    -0.00001148     0.00007457
+    ==== End of matrix output ====
+      Sum beta-part :   0.6743
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000933    -0.00000000     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.67432796    -0.00008840
+       4       0.00000000     0.00000000    -0.00008840     0.00016336
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        Li  1 _small   H   1 _small
+--------------------------------------------------------------------
+ alpha    0.3257  |      0.0002         0.3254         0.0001
+ beta     0.6743  |      0.0000         0.6742         0.0001
+
+* Gross populations (all):
+L Li  1       2.31312619E-04  9.33235007E-06
+L H   1       3.44522889E-08  3.36262473E-10
+Li  1 _small  3.25381711E-01  6.74239555E-01
+H   1 _small  6.30936236E-05  7.49603942E-05
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.0002         0.0000
+Li  1 _small                 0.3254
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.6743
+
+* Positronic eigenvalue no.  13: -37562.031903724       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.3281
+      beta-part :   0.6719
+   POPMAT: labels    4
+      Sum alpha-part:   0.3281
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00008976    -0.00000452     0.00000000     0.00000000
+       2      -0.00000452     0.00000709     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.32728946    -0.00239898
+       4       0.00000000     0.00000000    -0.00239898     0.00553380
+    ==== End of matrix output ====
+      Sum beta-part :   0.6719
+
+               Column   1     Column   2     Column   3     Column   4
+       2      -0.00000000     0.00000010     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.65642406    -0.01208281
+       4       0.00000000     0.00000000    -0.01208281     0.03962835
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.3281  |      0.3249         0.0031
+ beta     0.6719  |      0.6443         0.0275
+
+* Gross populations (all):
+L Li  1       8.52403488E-05  2.44658562E-09
+L H   1       2.57562733E-06  9.79163419E-08
+Li  1 _small  3.24890482E-01  6.44341245E-01
+H   1 _small  3.13482242E-03  2.75455348E-02
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.3273        -0.0048
+H   1 _small                 0.0055
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.6564        -0.0242
+H   1 _small                 0.0396
+
+* Positronic eigenvalue no.  14: -37561.321683330       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.2656
+      beta-part :   0.7344
+   POPMAT: labels    4
+      Sum alpha-part:   0.2656
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00001335    -0.00001224     0.00000000     0.00000000
+       2      -0.00001224     0.00008527     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00822645    -0.00382149
+       4       0.00000000     0.00000000    -0.00382149     0.26498754
+    ==== End of matrix output ====
+      Sum beta-part :   0.7344
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000003    -0.00000002     0.00000000     0.00000000
+       2      -0.00000002     0.00000264     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.03244214    -0.02007297
+       4       0.00000000     0.00000000    -0.02007297     0.74205600
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.2656  |      0.0044         0.2612
+ beta     0.7344  |      0.0124         0.7220
+
+* Gross populations (all):
+L Li  1       1.11578441E-06  5.08132142E-09
+L H   1       7.30321875E-05  2.61576342E-06
+Li  1 _small  4.40496585E-03  1.23691721E-02
+H   1 _small  2.61166056E-01  7.21983037E-01
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.0082        -0.0076
+H   1 _small                 0.2650
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.0324        -0.0401
+H   1 _small                 0.7421
+
+* Positronic eigenvalue no.  15: -37561.176851648       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.0874
+      beta-part :   0.9126
+   POPMAT: labels    4
+      Sum alpha-part:   0.0874
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00001670    -0.00001505     0.00000000     0.00000000
+       2      -0.00001505     0.00006437     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00862872    -0.00128213
+       4       0.00000000     0.00000000    -0.00128213     0.08124703
+    ==== End of matrix output ====
+      Sum beta-part :   0.9126
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000011    -0.00000012     0.00000000     0.00000000
+       2      -0.00000012     0.00001095     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.02561353    -0.00617288
+       4       0.00000000     0.00000000    -0.00617288     0.89935893
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.0874  |      0.0073         0.0800
+ beta     0.9126  |      0.0194         0.8932
+
+* Gross populations (all):
+L Li  1       1.65377502E-06 -8.76267947E-09
+L H   1       4.93217849E-05  1.08368361E-05
+Li  1 _small  7.34658945E-03  1.94406578E-02
+H   1 _small  7.99648934E-02  8.93186056E-01
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.0086        -0.0026
+H   1 _small                 0.0812
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.0256        -0.0123
+H   1 _small                 0.8994
+
+* Positronic eigenvalue no.  16: -37560.496710571       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.1306
+      beta-part :   0.8694
+   POPMAT: labels    4
+      Sum alpha-part:   0.1306
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00002687    -0.00001087     0.00000000     0.00000000
+       2      -0.00001087     0.00003127     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.01204845    -0.01514139
+       4       0.00000000     0.00000000    -0.01514139     0.14881155
+    ==== End of matrix output ====
+      Sum beta-part :   0.8694
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000475    -0.00000041     0.00000000     0.00000000
+       2      -0.00000041     0.00000840     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.57393411    -0.03912054
+       4       0.00000000     0.00000000    -0.03912054     0.37368103
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.1306  |     -0.0031         0.1337
+ beta     0.8694  |      0.5348         0.3346
+
+* Gross populations (all):
+L Li  1       1.59999445E-05  4.33815406E-06
+L H   1       2.03996822E-05  7.99438119E-06
+Li  1 _small -3.09294250E-03  5.34813566E-01
+H   1 _small  1.33670153E-01  3.34560492E-01
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.0120        -0.0303
+H   1 _small                 0.1488
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.5739        -0.0782
+H   1 _small                 0.3737
+
+* Positronic eigenvalue no.  17: -37560.107440267       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.1267
+      beta-part :   0.8733
+   POPMAT: labels    4
+      Sum alpha-part:   0.1267
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00001022    -0.00000271     0.00000000     0.00000000
+       2      -0.00000271     0.00002476     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.01052585    -0.01263382
+       4       0.00000000     0.00000000    -0.01263382     0.14142561
+    ==== End of matrix output ====
+      Sum beta-part :   0.8733
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000562     0.00000022     0.00000000     0.00000000
+       2       0.00000022     0.00000497     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.47061019     0.03431801
+       4       0.00000000     0.00000000     0.03431801     0.33402936
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.1267  |     -0.0021         0.1288
+ beta     0.8733  |      0.5049         0.3683
+
+* Gross populations (all):
+L Li  1       7.51174097E-06  5.84123031E-06
+L H   1       2.20509058E-05  5.19078154E-06
+Li  1 _small -2.10796458E-03  5.04928208E-01
+H   1 _small  1.28791788E-01  3.68347374E-01
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.0105        -0.0253
+H   1 _small                 0.1414
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.4706         0.0686
+H   1 _small                 0.3340
+
+* Positronic eigenvalue no.  18: -37560.073786202       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.5000
+      beta-part :   0.5000
+   POPMAT: labels    4
+      Sum alpha-part:   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000062    -0.00000044     0.00000000     0.00000000
+       2      -0.00000044     0.00002728     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00407329    -0.00050831
+       4       0.00000000     0.00000000    -0.00050831     0.49691631
+    ==== End of matrix output ====
+      Sum beta-part :   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000062    -0.00000044     0.00000000     0.00000000
+       2      -0.00000044     0.00002728     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00407329    -0.00050831
+       4       0.00000000     0.00000000    -0.00050831     0.49691631
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.5000  |      0.0036         0.4964
+ beta     0.5000  |      0.0036         0.4964
+
+* Gross populations (all):
+L Li  1       1.78680419E-07  1.78680418E-07
+L H   1       2.68403766E-05  2.68403766E-05
+Li  1 _small  3.56498256E-03  3.56498258E-03
+H   1 _small  4.96407998E-01  4.96407998E-01
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.0041        -0.0010
+H   1 _small                 0.4969
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.0041        -0.0010
+H   1 _small                 0.4969
+
+* Positronic eigenvalue no.  19: -37559.301651047       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.2804
+      beta-part :   0.7196
+   POPMAT: labels    4
+      Sum alpha-part:   0.2804
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00002651    -0.00000321     0.00000000     0.00000000
+       2      -0.00000321     0.00000582     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.27790181    -0.01303361
+       4       0.00000000     0.00000000    -0.01303361     0.02858549
+    ==== End of matrix output ====
+      Sum beta-part :   0.7196
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000481    -0.00000005     0.00000000     0.00000000
+       2      -0.00000005     0.00000019     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.64913830     0.00529651
+       4       0.00000000     0.00000000     0.00529651     0.05981779
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.2804  |      0.2649         0.0156
+ beta     0.7196  |      0.6544         0.0651
+
+* Gross populations (all):
+L Li  1       2.33033899E-05  4.76253973E-06
+L H   1       2.61313466E-06  1.40607214E-07
+Li  1 _small  2.64868194E-01  6.54434814E-01
+H   1 _small  1.55518782E-02  6.51142948E-02
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.2779        -0.0261
+H   1 _small                 0.0286
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.6491         0.0106
+H   1 _small                 0.0598
+
+* Positronic eigenvalue no.  20: -37559.218215894       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.5000
+      beta-part :   0.5000
+   POPMAT: labels    4
+      Sum alpha-part:   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00001438     0.00000005     0.00000000     0.00000000
+       2       0.00000005     0.00000008     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.49633396    -0.00015008
+       4       0.00000000     0.00000000    -0.00015008     0.00395164
+    ==== End of matrix output ====
+      Sum beta-part :   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00001438     0.00000005     0.00000000     0.00000000
+       2       0.00000005     0.00000008     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.49633396    -0.00015008
+       4       0.00000000     0.00000000    -0.00015008     0.00395164
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.5000  |      0.4962         0.0038
+ beta     0.5000  |      0.4962         0.0038
+
+* Gross populations (all):
+L Li  1       1.44240943E-05  1.44240943E-05
+L H   1       1.22976104E-07  1.22976105E-07
+Li  1 _small  4.96183886E-01  4.96183886E-01
+H   1 _small  3.80156732E-03  3.80156731E-03
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.4963        -0.0003
+H   1 _small                 0.0040
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.4963        -0.0003
+H   1 _small                 0.0040
+
+* Positronic eigenvalue no.  21: -37559.102492818       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.3339
+      beta-part :   0.6661
+   POPMAT: labels    4
+      Sum alpha-part:   0.3339
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00002662    -0.00000325     0.00000000     0.00000000
+       2      -0.00000325     0.00000463     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.31534471     0.00304624
+       4       0.00000000     0.00000000     0.00304624     0.01238926
+    ==== End of matrix output ====
+      Sum beta-part :   0.6661
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000001    -0.00000000     0.00000000     0.00000000
+       2      -0.00000000     0.00000005     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.63302754     0.00239852
+       4       0.00000000     0.00000000     0.00239852     0.02832416
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.3339  |      0.3184         0.0154
+ beta     0.6661  |      0.6354         0.0307
+
+* Gross populations (all):
+L Li  1       2.33748249E-05  1.10873019E-08
+L H   1       1.37793318E-06  5.09161440E-08
+Li  1 _small  3.18390945E-01  6.35426061E-01
+H   1 _small  1.54355014E-02  3.07226771E-02
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.3153         0.0061
+H   1 _small                 0.0124
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.6330         0.0048
+H   1 _small                 0.0283
+
+* Positronic eigenvalue no.  22: -37558.732940529       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.3809
+      beta-part :   0.6191
+   POPMAT: labels    4
+      Sum alpha-part:   0.3809
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00001405    -0.00001230     0.00000000     0.00000000
+       2      -0.00001230     0.00003134     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.03875059     0.01662416
+       4       0.00000000     0.00000000     0.01662416     0.30888122
+    ==== End of matrix output ====
+      Sum beta-part :   0.6191
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000021     0.00000000     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.10046420    -0.04957394
+       4       0.00000000     0.00000000    -0.04957394     0.61778254
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.3809  |      0.0554         0.3255
+ beta     0.6191  |      0.0509         0.5682
+
+* Gross populations (all):
+L Li  1       1.75546537E-06  2.13451338E-07
+L H   1       1.90446170E-05  5.15914270E-10
+Li  1 _small  5.53747420E-02  5.08902610E-02
+H   1 _small  3.25505381E-01  5.68208602E-01
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.0388         0.0332
+H   1 _small                 0.3089
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.1005        -0.0991
+H   1 _small                 0.6178
+
+* Positronic eigenvalue no.  23: -37558.172197123       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.0095
+      beta-part :   0.9905
+   POPMAT: labels    4
+      Sum alpha-part:   0.0095
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000337    -0.00000130     0.00000000     0.00000000
+       2      -0.00000130     0.00000243     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.03043951    -0.02505336
+       4       0.00000000     0.00000000    -0.02505336     0.02915005
+    ==== End of matrix output ====
+      Sum beta-part :   0.9905
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000158    -0.00000002     0.00000000     0.00000000
+       2      -0.00000002     0.00000003     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.83413194     0.04783625
+       4       0.00000000     0.00000000     0.04783625     0.06070797
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.0095  |      0.0054         0.0041
+ beta     0.9905  |      0.8820         0.1085
+
+* Gross populations (all):
+L Li  1       2.06583169E-06  1.55886319E-06
+L H   1       1.12485745E-06  1.32906679E-08
+Li  1 _small  5.38615029E-03  8.81968185E-01
+H   1 _small  4.09668834E-03  1.08544214E-01
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.0304        -0.0501
+H   1 _small                 0.0292
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.8341         0.0957
+H   1 _small                 0.0607
+
+* Positronic eigenvalue no.  24: -37558.121316177       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.1761
+      beta-part :   0.8239
+   POPMAT: labels    4
+      Sum alpha-part:   0.1761
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00004270    -0.00003707     0.00000000     0.00000000
+       2      -0.00003707     0.00003833     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.80423533    -0.71714059
+       4       0.00000000     0.00000000    -0.71714059     0.80617164
+    ==== End of matrix output ====
+      Sum beta-part :   0.8239
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000004     0.00000000     0.00000000     0.00000000
+       2       0.00000000     0.00000002     0.00000000     0.00000000
+       3       0.00000000     0.00000000     2.27379142    -1.53253888
+       4       0.00000000     0.00000000    -1.53253888     1.61515358
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.1761  |      0.0871         0.0890
+ beta     0.8239  |      0.7413         0.0826
+
+* Gross populations (all):
+L Li  1       5.62649776E-06  4.54430574E-08
+L H   1       1.25530472E-06  2.19188552E-08
+Li  1 _small  8.70947462E-02  7.41252546E-01
+H   1 _small  8.90310549E-02  8.26147033E-02
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.8042        -1.4343
+H   1 _small                 0.8062
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  2.2738        -3.0651
+H   1 _small                 1.6152
+
+* Positronic eigenvalue no.  25: -37558.037047733       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.4229
+      beta-part :   0.5771
+   POPMAT: labels    4
+      Sum alpha-part:   0.4229
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00001141    -0.00001086     0.00000000     0.00000000
+       2      -0.00001086     0.00001566     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.21337035    -0.13629971
+       4       0.00000000     0.00000000    -0.13629971     0.48213363
+    ==== End of matrix output ====
+      Sum beta-part :   0.5771
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.70356667    -0.54543640
+       4       0.00000000     0.00000000    -0.54543640     0.96439621
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.4229  |      0.0771         0.3458
+ beta     0.5771  |      0.1581         0.4190
+
+* Gross populations (all):
+L Li  1       5.48079252E-07  6.89073533E-10
+L H   1       4.79631420E-06  2.71761466E-10
+Li  1 _small  7.70706438E-02  1.58130274E-01
+H   1 _small  3.45833923E-01  4.18959814E-01
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.2134        -0.2726
+H   1 _small                 0.4821
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.7036        -1.0909
+H   1 _small                 0.9644
+
+* Positronic eigenvalue no.  26: -37557.952716514       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.5000
+      beta-part :   0.5000
+   POPMAT: labels    4
+      Sum alpha-part:   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000197    -0.00000000     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.50066194    -0.00041120
+       4       0.00000000     0.00000000    -0.00041120     0.00015847
+    ==== End of matrix output ====
+      Sum beta-part :   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000197    -0.00000000     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.50066199    -0.00041120
+       4       0.00000000     0.00000000    -0.00041120     0.00015847
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.5000  |      0.5003        -0.0003
+ beta     0.5000  |      0.5003        -0.0003
+
+* Gross populations (all):
+L Li  1       1.96965478E-06  1.96965449E-06
+L H   1      -1.00392640E-09 -1.00392503E-09
+Li  1 _small  5.00250737E-01  5.00250784E-01
+H   1 _small -2.52729673E-04 -2.52729142E-04
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.5007        -0.0008
+H   1 _small                 0.0002
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.5007        -0.0008
+H   1 _small                 0.0002
+
+* Positronic eigenvalue no.  27: -37557.950948782       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.3019
+      beta-part :   0.6981
+   POPMAT: labels    4
+      Sum alpha-part:   0.3019
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000258     0.00000027     0.00000000     0.00000000
+       2       0.00000027     0.00000023     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.29006873     0.00361490
+       4       0.00000000     0.00000000     0.00361490     0.00464141
+    ==== End of matrix output ====
+      Sum beta-part :   0.6981
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000060    -0.00000001     0.00000000     0.00000000
+       2      -0.00000001     0.00000000     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.67694091     0.00546800
+       4       0.00000000     0.00000000     0.00546800     0.01017921
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.3019  |      0.2937         0.0083
+ beta     0.6981  |      0.6824         0.0156
+
+* Gross populations (all):
+L Li  1       2.84984991E-06  5.94230975E-07
+L H   1       4.96092114E-07 -1.15430010E-09
+Li  1 _small  2.93683628E-01  6.82408914E-01
+H   1 _small  8.25630824E-03  1.56472114E-02
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.2901         0.0072
+H   1 _small                 0.0046
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.6769         0.0109
+H   1 _small                 0.0102
+
+* Positronic eigenvalue no.  28: -37557.800466085       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.3340
+      beta-part :   0.6660
+   POPMAT: labels    4
+      Sum alpha-part:   0.3340
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00000099     0.00000001     0.00000000     0.00000000
+       2       0.00000001     0.00000000     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.37089005    -0.02247977
+       4       0.00000000     0.00000000    -0.02247977     0.00806366
+    ==== End of matrix output ====
+      Sum beta-part :   0.6660
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.74704849    -0.04860971
+       4       0.00000000     0.00000000    -0.04860971     0.01617575
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    Li  1 _small   H   1 _small
+-----------------------------------------------------
+ alpha    0.3340  |      0.3484        -0.0144
+ beta     0.6660  |      0.6984        -0.0324
+
+* Gross populations (all):
+L Li  1       9.90570800E-07  5.21166909E-10
+L H   1       6.77003394E-09  2.07365108E-10
+Li  1 _small  3.48410279E-01  6.98438788E-01
+H   1 _small -1.44161112E-02 -3.24339548E-02
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.3709        -0.0450
+H   1 _small                 0.0081
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small   H   1 _small
+--------------------------------------
+Li  1 _small  0.7470        -0.0972
+H   1 _small                 0.0162
+
+* Electronic eigenvalue no.   1: -2.0019427274620       (Occupation : f = 1.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.9999
+      beta-part :   0.0001
+   POPMAT: labels    4
+      Sum alpha-part:   0.9999
+
+               Column   1     Column   2     Column   3     Column   4
+       1       1.00016813    -0.00013908     0.00000000     0.00000000
+       2      -0.00013908     0.00001446     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00003186     0.00000000
+    ==== End of matrix output ====
+      Sum beta-part :   0.0001
+
+               Column   1     Column   2     Column   3     Column   4
+       3     0.000000E+00   0.000000E+00   6.371899E-05  -9.025912E-09
+       4     0.000000E+00   0.000000E+00  -9.025912E-09   3.934209E-10
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    0.9999  |      1.0000        -0.0001
+ beta     0.0001  |      0.0000         0.0000
+
+* Gross populations (all):
+L Li  1       1.00002905E+00  1.43813524E-14
+L H   1      -1.24616995E-04  1.64629783E-15
+Li  1 _small  3.18604317E-05  6.37099624E-05
+H   1 _small  1.71055789E-09 -8.63249142E-09
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       1.0002        -0.0003
+L H   1                      0.0000
+
+* Electronic eigenvalue no.   2: -0.1933074789034       (Occupation : f = 1.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   1.0000
+      beta-part :   0.0000
+   POPMAT: labels    4
+      Sum alpha-part:   1.0000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.15171883     0.17647982     0.00000000     0.00000000
+       2       0.17647982     0.49531057     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000089     0.00000023
+       4       0.00000000     0.00000000     0.00000023     0.00000223
+    ==== End of matrix output ====
+      Sum beta-part :   0.0000
+
+               Column   1     Column   2     Column   3     Column   4
+       1     6.544193E-11  -6.110278E-14   0.000000E+00   0.000000E+00
+       2    -6.110278E-14   6.068375E-15   0.000000E+00   0.000000E+00
+       3     0.000000E+00   0.000000E+00   1.935452E-06   4.869852E-07
+       4     0.000000E+00   0.000000E+00   4.869852E-07   4.467338E-06
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    1.0000  |      0.3282         0.6718
+ beta     0.0000  |      0.0000        -0.0000
+
+* Gross populations (all):
+L Li  1       3.28198648E-01  6.53808290E-11
+L H   1       6.71790396E-01 -5.50344047E-14
+Li  1 _small  1.12144341E-06  2.42243691E-06
+H   1 _small  2.45764613E-06  4.95432316E-06
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.1517         0.3530
+L H   1                      0.4953
+
+* Electronic eigenvalue no.   3: -0.457007290E-01       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   1.0000
+      beta-part :   0.0000
+   POPMAT: labels    4
+      Sum alpha-part:   1.0000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.99993321    -0.03766199     0.00000000     0.00000000
+       2      -0.03766199     0.07538518     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000128     0.00000003
+       4       0.00000000     0.00000000     0.00000003     0.00000028
+    ==== End of matrix output ====
+      Sum beta-part :   0.0000
+
+               Column   1     Column   2     Column   3     Column   4
+       1     4.827045E-10   7.942173E-13   0.000000E+00   0.000000E+00
+       2     7.942173E-13   1.004897E-13   0.000000E+00   0.000000E+00
+       3     0.000000E+00   0.000000E+00   3.152913E-06   1.253174E-07
+       4     0.000000E+00   0.000000E+00   1.253174E-07   5.528372E-07
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    1.0000  |      0.9623         0.0377
+ beta     0.0000  |      0.0000         0.0000
+
+* Gross populations (all):
+L Li  1       9.62271229E-01  4.83498704E-10
+L H   1       3.77231942E-02  8.94707012E-13
+Li  1 _small  1.31025391E-06  3.27823057E-06
+H   1 _small  3.09907419E-07  6.78154564E-07
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.9999        -0.0753
+L H   1                      0.0754
+
+* Electronic eigenvalue no.   4:  0.107064093E-01       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.5000
+      beta-part :   0.5000
+   POPMAT: labels    4
+      Sum alpha-part:   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.49865884     0.00063797     0.00000000     0.00000000
+       2       0.00063797     0.00006117     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000048    -0.00000000
+    ==== End of matrix output ====
+      Sum beta-part :   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.49866207     0.00063798     0.00000000     0.00000000
+       2       0.00063798     0.00006117     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000435     0.00000001
+       4       0.00000000     0.00000000     0.00000001     0.00000001
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    0.5000  |      0.4993         0.0007
+ beta     0.5000  |      0.4993         0.0007
+
+* Gross populations (all):
+L Li  1       4.99296810E-01  4.99300049E-01
+L H   1       6.99141784E-04  6.99145964E-04
+Li  1 _small  4.81650681E-07  4.35845436E-06
+H   1 _small -1.01935738E-09  1.44774209E-08
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.4987         0.0013
+L H   1                      0.0001
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.4987         0.0013
+L H   1                      0.0001
+
+* Electronic eigenvalue no.   5:  0.107096298E-01       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.5000
+      beta-part :   0.5000
+   POPMAT: labels    4
+      Sum alpha-part:   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.49866224     0.00063790     0.00000000     0.00000000
+       2       0.00063790     0.00006116     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000242     0.00000000
+    ==== End of matrix output ====
+      Sum beta-part :   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.49865900     0.00063790     0.00000000     0.00000000
+       2       0.00063790     0.00006116     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000242     0.00000000
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    0.5000  |      0.4993         0.0007
+ beta     0.5000  |      0.4993         0.0007
+
+* Gross populations (all):
+L Li  1       4.99300142E-01  4.99296895E-01
+L H   1       6.99057023E-04  6.99052477E-04
+Li  1 _small  2.42001943E-06  2.42002256E-06
+H   1 _small  6.72872317E-09  6.72871654E-09
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.4987         0.0013
+L H   1                      0.0001
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.4987         0.0013
+L H   1                      0.0001
+
+* Electronic eigenvalue no.   6:  0.735356392E-01       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   1.0000
+      beta-part :   0.0000
+   POPMAT: labels    4
+      Sum alpha-part:   1.0000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       1.78624761    -0.75210029     0.00000000     0.00000000
+       2      -0.75210029     0.71794608     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000205    -0.00000035
+       4       0.00000000     0.00000000    -0.00000035     0.00000107
+    ==== End of matrix output ====
+      Sum beta-part :   0.0000
+
+               Column   1     Column   2     Column   3     Column   4
+       1     7.485227E-11  -9.290001E-14   0.000000E+00   0.000000E+00
+       2    -9.290001E-14   1.251022E-14   0.000000E+00   0.000000E+00
+       3     0.000000E+00   0.000000E+00   5.372008E-06  -1.523757E-06
+       4     0.000000E+00   0.000000E+00  -1.523757E-06   2.137639E-06
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    1.0000  |      1.0341        -0.0342
+ beta     0.0000  |      0.0000        -0.0000
+
+* Gross populations (all):
+L Li  1       1.03414733E+00  7.47593656E-11
+L H   1      -3.41542053E-02 -8.03897845E-14
+Li  1 _small  1.69682962E-06  3.84825091E-06
+H   1 _small  7.18820758E-07  6.13881747E-07
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       1.7862        -1.5042
+L H   1                      0.7179
+
+* Electronic eigenvalue no.   7:  0.1356103016406       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   1.0000
+      beta-part :   0.0000
+   POPMAT: labels    4
+      Sum alpha-part:   1.0000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       4.88202854    -3.88745021     0.00000000     0.00000000
+       2      -3.88745021     3.89286153     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000570    -0.00000443
+       4       0.00000000     0.00000000    -0.00000443     0.00000581
+    ==== End of matrix output ====
+      Sum beta-part :   0.0000
+
+               Column   1     Column   2     Column   3     Column   4
+       1     4.258716E-13  -3.238977E-14   0.000000E+00   0.000000E+00
+       2    -3.238977E-14   8.756828E-13   0.000000E+00   0.000000E+00
+       3     0.000000E+00   0.000000E+00   1.511627E-05  -9.524188E-06
+       4     0.000000E+00   0.000000E+00  -9.524188E-06   1.162984E-05
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    1.0000  |      0.9946         0.0054
+ beta     0.0000  |      0.0000         0.0000
+
+* Gross populations (all):
+L Li  1       9.94578325E-01  3.93481880E-13
+L H   1       5.41131575E-03  8.43293043E-13
+Li  1 _small  1.27365792E-06  5.59208453E-06
+H   1 _small  1.38823288E-06  2.10564937E-06
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       4.8820        -7.7749
+L H   1                      3.8929
+
+* Electronic eigenvalue no.   8:  0.3670037822476       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   1.0000
+      beta-part :   0.0000
+   POPMAT: labels    4
+      Sum alpha-part:   1.0000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       1.79324983    -1.75470181     0.00000000     0.00000000
+       2      -1.75470181     2.71613517     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000265    -0.00000086
+       4       0.00000000     0.00000000    -0.00000086     0.00000529
+    ==== End of matrix output ====
+      Sum beta-part :   0.0000
+
+               Column   1     Column   2     Column   3     Column   4
+       1     4.932320E-09  -1.852204E-13   0.000000E+00   0.000000E+00
+       2    -1.852204E-13   7.724537E-14   0.000000E+00   0.000000E+00
+       3     0.000000E+00   0.000000E+00   9.030089E-06  -3.655815E-06
+       4     0.000000E+00   0.000000E+00  -3.655815E-06   1.066610E-05
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    1.0000  |      0.0385         0.9614
+ beta     0.0000  |      0.0000        -0.0000
+
+* Gross populations (all):
+L Li  1       3.85480233E-02  4.93213491E-09
+L H   1       9.61433367E-01 -1.07975042E-13
+Li  1 _small  1.78874489E-06  5.37427379E-06
+H   1 _small  4.43134497E-06  7.01028462E-06
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       1.7932        -3.5094
+L H   1                      2.7161
+
+* Electronic eigenvalue no.   9:  0.4878978838891       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.5000
+      beta-part :   0.5000
+   POPMAT: labels    4
+      Sum alpha-part:   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.49874040     0.00034574     0.00000000     0.00000000
+       2       0.00034574     0.00055370     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000293    -0.00000004
+       4       0.00000000     0.00000000    -0.00000004     0.00000001
+    ==== End of matrix output ====
+      Sum beta-part :   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.49873980     0.00034588     0.00000000     0.00000000
+       2       0.00034588     0.00055349     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00002640     0.00000003
+       4       0.00000000     0.00000000     0.00000003     0.00000005
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    0.5000  |      0.4991         0.0009
+ beta     0.5000  |      0.4991         0.0009
+
+* Gross populations (all):
+L Li  1       4.99086135E-01  4.99085679E-01
+L H   1       8.99442206E-04  8.99368046E-04
+Li  1 _small  2.89559292E-06  2.64303922E-05
+H   1 _small -3.04658112E-08  8.03286105E-08
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.4987         0.0007
+L H   1                      0.0006
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.4987         0.0007
+L H   1                      0.0006
+
+* Electronic eigenvalue no.  10:  0.4879332399198       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.5000
+      beta-part :   0.5000
+   POPMAT: labels    4
+      Sum alpha-part:   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.49873964     0.00034595     0.00000000     0.00000000
+       2       0.00034595     0.00055355     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00001467    -0.00000000
+       4       0.00000000     0.00000000    -0.00000000     0.00000003
+    ==== End of matrix output ====
+      Sum beta-part :   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.49874008     0.00034595     0.00000000     0.00000000
+       2       0.00034595     0.00055355     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00001467    -0.00000000
+       4       0.00000000     0.00000000    -0.00000000     0.00000003
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    0.5000  |      0.4991         0.0009
+ beta     0.5000  |      0.4991         0.0009
+
+* Gross populations (all):
+L Li  1       4.99085590E-01  4.99086026E-01
+L H   1       8.99502805E-04  8.99503589E-04
+Li  1 _small  1.46636478E-05  1.46636453E-05
+H   1 _small  2.49353346E-08  2.49353614E-08
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.4987         0.0007
+L H   1                      0.0006
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.4987         0.0007
+L H   1                      0.0006
+
+* Electronic eigenvalue no.  11:  0.5628495049163       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   1.0000
+      beta-part :   0.0000
+   POPMAT: labels    4
+      Sum alpha-part:   1.0000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       1.38137183    -0.78428400     0.00000000     0.00000000
+       2      -0.78428400     1.18716360     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000477    -0.00000125
+       4       0.00000000     0.00000000    -0.00000125     0.00000413
+    ==== End of matrix output ====
+      Sum beta-part :   0.0000
+
+               Column   1     Column   2     Column   3     Column   4
+       1     4.160209E-08   5.878044E-11   0.000000E+00   0.000000E+00
+       2     5.878044E-11   1.261951E-10   0.000000E+00   0.000000E+00
+       3     0.000000E+00   0.000000E+00   1.845027E-05  -3.236575E-07
+       4     0.000000E+00   0.000000E+00  -3.236575E-07   8.315983E-06
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    1.0000  |      0.5971         0.4029
+ beta     0.0000  |      0.0000         0.0000
+
+* Gross populations (all):
+L Li  1       5.97087832E-01  4.16608745E-08
+L H   1       4.02879607E-01  1.84975573E-10
+Li  1 _small  3.52081404E-06  1.81266083E-05
+H   1 _small  2.87949965E-06  7.99232545E-06
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       1.3814        -1.5686
+L H   1                      1.1872
+
+* Electronic eigenvalue no.  12:  1.0757529698165       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   1.0000
+      beta-part :   0.0000
+   POPMAT: labels    4
+      Sum alpha-part:   1.0000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       1.03633846    -0.12583300     0.00000000     0.00000000
+       2      -0.12583300     0.21525977     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00002149     0.00000017
+       4       0.00000000     0.00000000     0.00000017     0.00000085
+    ==== End of matrix output ====
+      Sum beta-part :   0.0000
+
+               Column   1     Column   2     Column   3     Column   4
+       1     6.390605E-12  -1.864351E-12   0.000000E+00   0.000000E+00
+       2    -1.864351E-12   7.425248E-11   0.000000E+00   0.000000E+00
+       3     0.000000E+00   0.000000E+00   4.314149E-05  -4.599892E-07
+       4     0.000000E+00   0.000000E+00  -4.599892E-07   2.857911E-06
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    1.0000  |      0.9105         0.0894
+ beta     0.0000  |      0.0000         0.0000
+
+* Gross populations (all):
+L Li  1       9.10505463E-01  4.52625342E-12
+L H   1       8.94267696E-02  7.23881309E-11
+Li  1 _small  2.16611280E-05  4.26815038E-05
+H   1 _small  1.02652910E-06  2.39792181E-06
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       1.0363        -0.2517
+L H   1                      0.2153
+
+* Electronic eigenvalue no.  13:  1.5477083441732       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.5000
+      beta-part :   0.5000
+   POPMAT: labels    4
+      Sum alpha-part:   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00959624    -0.00792133     0.00000000     0.00000000
+       2      -0.00792133     0.50621936     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000003     0.00000008
+       4       0.00000000     0.00000000     0.00000008     0.00000539
+    ==== End of matrix output ====
+      Sum beta-part :   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00959623    -0.00792132     0.00000000     0.00000000
+       2      -0.00792132     0.50621943     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000023    -0.00000014
+       4       0.00000000     0.00000000    -0.00000014     0.00004852
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    0.5000  |      0.0017         0.4983
+ beta     0.5000  |      0.0017         0.4983
+
+* Gross populations (all):
+L Li  1       1.67491030E-03  1.67490895E-03
+L H   1       4.98298034E-01  4.98298110E-01
+Li  1 _small  1.04398363E-07  8.98528106E-08
+H   1 _small  5.46807722E-06  4.83737098E-05
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.0096        -0.0158
+L H   1                      0.5062
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.0096        -0.0158
+L H   1                      0.5062
+
+* Electronic eigenvalue no.  14:  1.5477453111156       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.5000
+      beta-part :   0.5000
+   POPMAT: labels    4
+      Sum alpha-part:   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00959628    -0.00792136     0.00000000     0.00000000
+       2      -0.00792136     0.50621946     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000013    -0.00000003
+       4       0.00000000     0.00000000    -0.00000003     0.00002695
+    ==== End of matrix output ====
+      Sum beta-part :   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00959628    -0.00792136     0.00000000     0.00000000
+       2      -0.00792136     0.50621937     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000013    -0.00000003
+       4       0.00000000     0.00000000    -0.00000003     0.00002695
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    0.5000  |      0.0017         0.4983
+ beta     0.5000  |      0.0017         0.4983
+
+* Gross populations (all):
+L Li  1       1.67492340E-03  1.67492312E-03
+L H   1       4.98298098E-01  4.98298017E-01
+Li  1 _small  9.71294865E-08  9.71295036E-08
+H   1 _small  2.69218808E-05  2.69218817E-05
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.0096        -0.0158
+L H   1                      0.5062
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.0096        -0.0158
+L H   1                      0.5062
+
+* Electronic eigenvalue no.  15:  1.8269353144723       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.9999
+      beta-part :   0.0001
+   POPMAT: labels    4
+      Sum alpha-part:   0.9999
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.55903898    -0.46000834     0.00000000     0.00000000
+       2      -0.46000834     1.36091100     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000335    -0.00000148
+       4       0.00000000     0.00000000    -0.00000148     0.00001298
+    ==== End of matrix output ====
+      Sum beta-part :   0.0001
+
+               Column   1     Column   2     Column   3     Column   4
+       1     1.260258E-10  -2.420728E-11   0.000000E+00   0.000000E+00
+       2    -2.420728E-11   3.160142E-09   0.000000E+00   0.000000E+00
+       3     0.000000E+00   0.000000E+00   8.615468E-06  -1.570563E-06
+       4     0.000000E+00   0.000000E+00  -1.570563E-06   4.784445E-05
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    0.9999  |      0.0990         0.9009
+ beta     0.0001  |      0.0000         0.0000
+
+* Gross populations (all):
+L Li  1       9.90306442E-02  1.01818525E-10
+L H   1       9.00902661E-01  3.13593490E-09
+Li  1 _small  1.87113450E-06  7.04490463E-06
+H   1 _small  1.15018214E-05  4.62738847E-05
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.5590        -0.9200
+L H   1                      1.3609
+
+* Electronic eigenvalue no.  16:  2.0897642806549       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.9999
+      beta-part :   0.0001
+   POPMAT: labels    4
+      Sum alpha-part:   0.9999
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.32543358    -0.28563158     0.00000000     0.00000000
+       2      -0.28563158     1.24574906     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000135    -0.00000073
+       4       0.00000000     0.00000000    -0.00000073     0.00002617
+    ==== End of matrix output ====
+      Sum beta-part :   0.0001
+
+               Column   1     Column   2     Column   3     Column   4
+       1     3.295325E-11   6.393829E-13   0.000000E+00   0.000000E+00
+       2     6.393829E-13   8.297536E-11   0.000000E+00   0.000000E+00
+       3     0.000000E+00   0.000000E+00   4.016309E-06  -1.951361E-06
+       4     0.000000E+00   0.000000E+00  -1.951361E-06   5.434734E-05
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1     
+-----------------------------------------------------
+ alpha    0.9999  |      0.0398         0.9601
+ beta     0.0001  |      0.0000         0.0000
+
+* Gross populations (all):
+L Li  1       3.98019985E-02  3.35926343E-11
+L H   1       9.60117477E-01  8.36147434E-11
+Li  1 _small  6.19912546E-07  2.06494801E-06
+H   1 _small  2.54431158E-05  5.23959821E-05
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       0.3254        -0.5713
+L H   1                      1.2457
+
+* Electronic eigenvalue no.  17:  5.2127037591110       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.9998
+      beta-part :   0.0002
+   POPMAT: labels    4
+      Sum alpha-part:   0.9998
+
+               Column   1     Column   2     Column   3     Column   4
+       1       1.01717168    -0.01728043     0.00000000     0.00000000
+       2      -0.01728043     0.01715708     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00007712    -0.00000006
+       4       0.00000000     0.00000000    -0.00000006     0.00000013
+    ==== End of matrix output ====
+      Sum beta-part :   0.0002
+
+               Column   1     Column   2     Column   3     Column   4
+       1     6.971725E-09  -2.911600E-12   0.000000E+00   0.000000E+00
+       2    -2.911600E-12   3.563200E-12   0.000000E+00   0.000000E+00
+       3     0.000000E+00   0.000000E+00   1.552363E-04  -3.791663E-07
+       4     0.000000E+00   0.000000E+00  -3.791663E-07   4.871205E-07
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1        Li  1 _small
+--------------------------------------------------------------------
+ alpha    0.9998  |      0.9999        -0.0001         0.0001
+ beta     0.0002  |      0.0000         0.0000         0.0002
+
+* Gross populations (all):
+L Li  1       9.99891254E-01  6.96881365E-09
+L H   1      -1.23346778E-04  6.51600196E-13
+Li  1 _small  7.70529661E-05  1.54857140E-04
+H   1 _small  6.73119035E-08  1.07954202E-07
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       1.0172        -0.0346
+L H   1                      0.0172
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.0002
+
+* Electronic eigenvalue no.  18:  5.7983409611487       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.4999
+      beta-part :   0.5001
+   POPMAT: labels    4
+      Sum alpha-part:   0.4999
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.50003361    -0.00021248     0.00000000     0.00000000
+       2      -0.00021248     0.00028901     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00002331     0.00000001
+       4       0.00000000     0.00000000     0.00000001     0.00000000
+    ==== End of matrix output ====
+      Sum beta-part :   0.5001
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.50000034    -0.00021134     0.00000000     0.00000000
+       2      -0.00021134     0.00028778     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00021355    -0.00000001
+       4       0.00000000     0.00000000    -0.00000001     0.00000003
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1        Li  1 _small
+--------------------------------------------------------------------
+ alpha    0.4999  |      0.4998         0.0001         0.0000
+ beta     0.5001  |      0.4998         0.0001         0.0002
+
+* Gross populations (all):
+L Li  1       4.99821131E-01  4.99789004E-01
+L H   1       7.65380451E-05  7.64462826E-05
+Li  1 _small  2.33188573E-05  2.13534472E-04
+H   1 _small  1.01704077E-08  1.66855155E-08
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1     
+-----------------------
+L Li  1       0.5000
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.5000         0.0000
+Li  1 _small                 0.0002
+
+* Electronic eigenvalue no.  19:  5.7992538875012       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.5000
+      beta-part :   0.5000
+   POPMAT: labels    4
+      Sum alpha-part:   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.50001643    -0.00021130     0.00000000     0.00000000
+       2      -0.00021130     0.00028772     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00011845    -0.00000000
+       4       0.00000000     0.00000000    -0.00000000     0.00000002
+    ==== End of matrix output ====
+      Sum beta-part :   0.5000
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.50001641    -0.00021130     0.00000000     0.00000000
+       2      -0.00021130     0.00028772     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00011845    -0.00000000
+       4       0.00000000     0.00000000    -0.00000000     0.00000002
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1        Li  1 _small
+--------------------------------------------------------------------
+ alpha    0.5000  |      0.4998         0.0001         0.0001
+ beta     0.5000  |      0.4998         0.0001         0.0001
+
+* Gross populations (all):
+L Li  1       4.99805131E-01  4.99805104E-01
+L H   1       7.64173653E-05  7.64173613E-05
+Li  1 _small  1.18451704E-04  1.18451705E-04
+H   1 _small  1.34137756E-08  1.34137761E-08
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.5000         0.0000
+Li  1 _small                 0.0001
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.5000         0.0000
+Li  1 _small                 0.0001
+
+* Electronic eigenvalue no.  20:  5.9108517537406       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.9998
+      beta-part :   0.0002
+   POPMAT: labels    4
+      Sum alpha-part:   0.9998
+
+               Column   1     Column   2     Column   3     Column   4
+       1       1.03081884    -0.03368948     0.00000000     0.00000000
+       2      -0.03368948     0.03630483     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00004863    -0.00000018
+       4       0.00000000     0.00000000    -0.00000018     0.00000036
+    ==== End of matrix output ====
+      Sum beta-part :   0.0002
+
+               Column   1     Column   2     Column   3     Column   4
+       1     1.611988E-05  -6.612777E-09   0.000000E+00   0.000000E+00
+       2    -6.612777E-09   8.900751E-09   0.000000E+00   0.000000E+00
+       3     0.000000E+00   0.000000E+00   1.908506E-04  -7.865020E-07
+       4     0.000000E+00   0.000000E+00  -7.865020E-07   1.274877E-06
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1        Li  1 _small
+--------------------------------------------------------------------
+ alpha    0.9998  |      0.9971         0.0026         0.0000
+ beta     0.0002  |      0.0000         0.0000         0.0002
+
+* Gross populations (all):
+L Li  1       9.97129356E-01  1.61132713E-05
+L H   1       2.61534852E-03  2.28797445E-09
+Li  1 _small  4.84510842E-05  1.90064148E-04
+H   1 _small  1.76461149E-07  4.88375427E-07
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1     
+--------------------------------------
+L Li  1       1.0308        -0.0674
+L H   1                      0.0363
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.0002
+
+* Electronic eigenvalue no.  21:  9.6323175345593       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.9998
+      beta-part :   0.0002
+   POPMAT: labels    4
+      Sum alpha-part:   0.9998
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.05922254    -0.06098783     0.00000000     0.00000000
+       2      -0.06098783     1.06242857     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000008    -0.00000004
+       4       0.00000000     0.00000000    -0.00000004     0.00010827
+    ==== End of matrix output ====
+      Sum beta-part :   0.0002
+
+               Column   1     Column   2     Column   3     Column   4
+       3     0.000000E+00   0.000000E+00   2.393917E-07  -2.398367E-07
+       4     0.000000E+00   0.000000E+00  -2.398367E-07   2.165394E-04
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1        H   1 _small
+--------------------------------------------------------------------
+ alpha    0.9998  |     -0.0018         1.0014         0.0001
+ beta     0.0002  |      0.0000         0.0000         0.0002
+
+* Gross populations (all):
+L Li  1      -1.76529706E-03  1.27742835E-15
+L H   1       1.00144074E+00  3.00861028E-15
+Li  1 _small  3.49929036E-08 -4.44985094E-10
+H   1 _small  1.08222906E-04  2.16299585E-04
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1        H   1 _small
+-----------------------------------------------------
+L Li  1       0.0592        -0.1220         0.0000
+L H   1                      1.0624         0.0000
+H   1 _small                                0.0001
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.H   1 _small
+-----------------------
+H   1 _small  0.0002
+
+* Electronic eigenvalue no.  22:  16.629250155275       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.9996
+      beta-part :   0.0004
+   POPMAT: labels    4
+      Sum alpha-part:   0.9996
+
+               Column   1     Column   2     Column   3     Column   4
+       1       1.00319164    -0.00408859     0.00000000     0.00000000
+       2      -0.00408859     0.00436489     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00020690    -0.00000001
+       4       0.00000000     0.00000000    -0.00000001     0.00000004
+    ==== End of matrix output ====
+      Sum beta-part :   0.0004
+
+               Column   1     Column   2     Column   3     Column   4
+       3     0.000000E+00   0.000000E+00   4.138180E-04  -1.017983E-07
+       4     0.000000E+00   0.000000E+00  -1.017983E-07   1.210864E-07
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        L H   1        Li  1 _small
+--------------------------------------------------------------------
+ alpha    0.9996  |      0.9991         0.0003         0.0002
+ beta     0.0004  |      0.0000         0.0000         0.0004
+
+* Gross populations (all):
+L Li  1       9.99103054E-01  3.59639799E-14
+L H   1       2.76298580E-04  6.67019497E-16
+Li  1 _small  2.06890902E-04  4.13716200E-04
+H   1 _small  2.12867402E-08  1.92880769E-08
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1        Li  1 _small
+-----------------------------------------------------
+L Li  1       1.0032        -0.0082         0.0000
+L H   1                      0.0044         0.0000
+Li  1 _small                                0.0002
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.0004
+
+* Electronic eigenvalue no.  23:  49.240600915458       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.9989
+      beta-part :   0.0011
+   POPMAT: labels    4
+      Sum alpha-part:   0.9989
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.99971425    -0.00133070     0.00000000     0.00000000
+       2      -0.00133070     0.00129737     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00054993    -0.00000000
+       4       0.00000000     0.00000000    -0.00000000     0.00000001
+    ==== End of matrix output ====
+      Sum beta-part :   0.0011
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.00109986    -0.00000003
+       4       0.00000000     0.00000000    -0.00000003     0.00000004
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        Li  1 _small
+-----------------------------------------------------
+ alpha    0.9989  |      0.9984         0.0005
+ beta     0.0011  |      0.0000         0.0011
+
+* Gross populations (all):
+L Li  1       9.98383553E-01  1.20391988E-15
+L H   1      -3.33298736E-05  1.76354513E-17
+Li  1 _small  5.49926963E-04  1.09983535E-03
+H   1 _small  7.14353818E-09  7.43788353E-09
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.9997         0.0000
+Li  1 _small                 0.0005
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.0011
+
+* Electronic eigenvalue no.  24:  61.349755398796       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.9988
+      beta-part :   0.0012
+   POPMAT: labels    4
+      Sum alpha-part:   0.9988
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.00746723    -0.00737895     0.00000000     0.00000000
+       2      -0.00737895     1.00544178     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00000001    -0.00000001
+       4       0.00000000     0.00000000    -0.00000001     0.00061630
+    ==== End of matrix output ====
+      Sum beta-part :   0.0012
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.00000003    -0.00000002
+       4       0.00000000     0.00000000    -0.00000002     0.00123261
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L H   1        H   1 _small
+-----------------------------------------------------
+ alpha    0.9988  |      0.9981         0.0006
+ beta     0.0012  |      0.0000         0.0012
+
+* Gross populations (all):
+L Li  1       8.82791650E-05  9.01272597E-18
+L H   1       9.98062828E-01  4.25894682E-18
+Li  1 _small  6.46097338E-09  8.56774235E-09
+H   1 _small  6.16297234E-04  1.23258098E-03
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L H   1        H   1 _small
+--------------------------------------
+L H   1       1.0054         0.0000
+H   1 _small                 0.0006
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.H   1 _small
+-----------------------
+H   1 _small  0.0012
+
+* Electronic eigenvalue no.  25:  151.58630854428       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.9969
+      beta-part :   0.0031
+   POPMAT: labels    4
+      Sum alpha-part:   0.9969
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.99568067    -0.00036791     0.00000000     0.00000000
+       2      -0.00036791     0.00037514     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00156000    -0.00000000
+    ==== End of matrix output ====
+      Sum beta-part :   0.0031
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.00312000    -0.00000001
+       4       0.00000000     0.00000000    -0.00000001     0.00000001
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        Li  1 _small
+-----------------------------------------------------
+ alpha    0.9969  |      0.9953         0.0016
+ beta     0.0031  |      0.0000         0.0031
+
+* Gross populations (all):
+L Li  1       9.95312768E-01  1.02785014E-17
+L H   1       7.23212891E-06  5.46696209E-19
+Li  1 _small  1.56000074E-03  3.11999657E-03
+H   1 _small  1.36093251E-09  1.15672423E-09
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.9957         0.0000
+Li  1 _small                 0.0016
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.0031
+
+* Electronic eigenvalue no.  26:  514.50271398106       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.9902
+      beta-part :   0.0098
+   POPMAT: labels    4
+      Sum alpha-part:   0.9902
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.98539798    -0.00009899     0.00000000     0.00000000
+       2      -0.00009899     0.00009814     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.00490062    -0.00000000
+    ==== End of matrix output ====
+      Sum beta-part :   0.0098
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.00980124    -0.00000000
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        Li  1 _small
+-----------------------------------------------------
+ alpha    0.9902  |      0.9853         0.0049
+ beta     0.0098  |      0.0000         0.0098
+
+* Gross populations (all):
+L Li  1       9.85298989E-01  1.92678166E-19
+L H   1      -8.52242440E-07  1.18807798E-20
+Li  1 _small  4.90062116E-03  9.80124105E-03
+H   1 _small  3.23637841E-10  2.29882118E-10
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.9854         0.0000
+Li  1 _small                 0.0049
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.0098
+
+* Electronic eigenvalue no.  27:  2023.6031394668       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.9657
+      beta-part :   0.0343
+   POPMAT: labels    4
+      Sum alpha-part:   0.9657
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.94863786    -0.00002039     0.00000000     0.00000000
+       2      -0.00002039     0.00002048     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.01712748    -0.00000000
+    ==== End of matrix output ====
+      Sum beta-part :   0.0343
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.03425497    -0.00000000
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        Li  1 _small
+-----------------------------------------------------
+ alpha    0.9657  |      0.9486         0.0171
+ beta     0.0343  |      0.0000         0.0343
+
+* Gross populations (all):
+L Li  1       9.48617463E-01  4.06533159E-21
+L H   1       8.36400561E-08  1.33418649E-22
+Li  1 _small  1.71274845E-02  3.42549687E-02
+H   1 _small  6.15017311E-11  4.80003518E-11
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.9486         0.0000
+Li  1 _small                 0.0171
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.0343
+
+* Electronic eigenvalue no.  28:  9796.4241832354       (Occupation : f = 0.0000)           
+============================================================================================
+   POPMAT: AO-basis
+      alpha-part:   0.8828
+      beta-part :   0.1172
+   POPMAT: labels    4
+      Sum alpha-part:   0.8828
+
+               Column   1     Column   2     Column   3     Column   4
+       1       0.82415715    -0.00000256     0.00000000     0.00000000
+       2      -0.00000256     0.00000255     0.00000000     0.00000000
+       3       0.00000000     0.00000000     0.05861514    -0.00000000
+    ==== End of matrix output ====
+      Sum beta-part :   0.1172
+
+               Column   1     Column   2     Column   3     Column   4
+       3       0.00000000     0.00000000     0.11723028    -0.00000000
+    ==== End of matrix output ====
+
+* Gross populations greater than 0.00010
+
+Gross     Total   |    L Li  1        Li  1 _small
+-----------------------------------------------------
+ alpha    0.8828  |      0.8242         0.0586
+ beta     0.1172  |      0.0000         0.1172
+
+* Gross populations (all):
+L Li  1       8.24154591E-01  2.53549011E-24
+L H   1      -4.28552077E-09  3.57718862E-25
+Li  1 _small  5.86151377E-02  1.17230275E-01
+H   1 _small  5.26311431E-12  3.88784297E-12
+
+
+ Net population -- alpha
+ -----------------------
+
+
+Net.pop.L Li  1        Li  1 _small
+--------------------------------------
+L Li  1       0.8242         0.0000
+Li  1 _small                 0.0586
+
+
+ Net population -- beta
+ ----------------------
+
+
+Net.pop.Li  1 _small
+-----------------------
+Li  1 _small  0.1172
+
+
+*** Total gross population ***
+
+Gross      Total    |    L Li  1        L H   1        Li  1 _small
+--------------------------------------------------------------------
+ total     4.00000  |      2.65646        1.34333        0.00020
+
+
+*** Total net population ***
+
+
+ Net population -- total
+ -----------------------
+
+
+Net.pop.L Li  1        L H   1        Li  1 _small
+-----------------------------------------------------
+L Li  1      56.1307       -32.2613         0.0000
+L H   1                     32.1307         0.0000
+Li  1 _small                               46.1787
+
+ * Closing HDF5 checkpoint file 
+    - DIRAC was compiled without hdf5, checkpointing was not possible
+
+*****************************************************
+********** E N D   of   D I R A C  output  **********
+*****************************************************
+
+
+ 
+     Date and time (Linux)  : Wed Aug 24 15:55:45 2022
+     Host name              : p1803                                   
+
+>>>> Node 0, utime: 2, stime: 0, minflt: 35665, majflt: 55, nvcsw: 2492, nivcsw: 810, maxrss: 132020
+>>>> Total WALL time used in DIRAC: 3s
+  
+  Dynamical Memory Usage Summary for Master
+  
+  Mean allocation size (Mb) :      2289.66
+  
+  Largest          10  allocations
+  
+    14495.85 Mb at subroutine pamana_+0x82                               for WORK in PAMANA                            
+    14495.85 Mb at subroutine psiscf_+0xab                               for WORK in PSISCF                            
+    14495.85 Mb at subroutine pamset_+0x356                              for WORK in PAMSET - 2                        
+    14495.85 Mb at subroutine gmotra_+0x5e1c                             for WORK in GMOTRA                            
+    14495.85 Mb at subroutine pamset_+0x88                               for WORK in PAMSET - 1                        
+    14495.85 Mb at subroutine MAIN__+0xa01                               for test allocation of work array in DIRAC mai
+        7.63 Mb at subroutine dftgrd_+0x58a                              for unnamed variable                          
+        7.63 Mb at subroutine dftgrd_+0x573                              for unnamed variable                          
+        7.63 Mb at subroutine dftgrd_+0x55c                              for unnamed variable                          
+        7.63 Mb at subroutine dftgrd_+0x545                              for unnamed variable                          
+  
+  Peak memory usage:     14526.38 MB
+  Peak memory usage:       14.186 GB
+       reached at subroutine : dftgrd_+0x712                             
+              for variable   : unnamed variable                          
+  
+ MEMGET high-water mark:     0.00 MB
+
+*****************************************************
+DIRAC pam run in /net/people/plggosiao/jobs/vis/lih/calcs_aug2022/dc_b3lyp_def2tzvp
