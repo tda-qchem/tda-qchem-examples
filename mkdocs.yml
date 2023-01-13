@@ -1,0 +1,45 @@
+site_name: qchem-tda-examples
+site_description: >-
+    A collection of examples accompanying the TDA-Qchem book (scratch repository).
+site_author: Gosia Olejniczak, Julien Tierny
+site_url: https://github.com/tda-qchem/tda-qchem-examples/tree/main/
+docs_dir: docs
+site_dir: build
+
+nav:
+    - Home: index.md
+    - About: README.md
+
+theme:
+  name: material
+  palette: #
+    - scheme: slate #
+      primary: teal
+      accent: teal
+      display.background_color: grey
+      background-color: grey
+  features:
+    - navigation.expand
+    #- navigation.top
+    #- toc.follow
+    - toc.integrate
+
+
+markdown_extensions:
+    - attr_list
+    - md_in_html
+    - pymdownx.highlight
+    - pymdownx.inlinehilite
+    - pymdownx.superfences
+    - pymdownx.snippets
+    - pymdownx.arithmatex
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.magiclink
+    - admonition
+    - codehilite:
+        guess_lang: false
+        use_pygments: true
+    - footnotes
+    - toc:
+        permalink: true

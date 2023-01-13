@@ -39,22 +39,22 @@ The MICD tensor and its gradient were calculated analytically in the development
 
 ### DIRAC inputs and run scripts
 
-* Molecular geometry of LiH molecule in XYZ format (in Angstrom): [LiH.xyz](https://github.com/tda-qchem/tda-qchem-explorations/tree/main/data/LiH_MICD/LiH.xyz)
-* Input for a wave function optimization: [scf.inp](https://github.com/tda-qchem/tda-qchem-explorations/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/scf.inp)
-* Input for calculations of the magnetic-field response (uses NMR shielding calculations): [prp.inp](https://github.com/tda-qchem/tda-qchem-explorations/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/prp.inp)
+* Molecular geometry of LiH molecule in XYZ format (in Angstrom): [LiH.xyz](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/LiH.xyz)
+* Input for a wave function optimization: [scf.inp](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/scf.inp)
+* Input for calculations of the magnetic-field response (uses NMR shielding calculations): [prp.inp](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/prp.inp)
 * Inputs for calculations of the components of the MICD tensor, composed of the elements of the current density vector induced by the magnetic field applied in 
-    the "x"-direction ([jbx.inp](https://github.com/tda-qchem/tda-qchem-explorations/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/visgrid_cube_128/jbx.inp)), 
-    the "y"-direction ([jby.inp](https://github.com/tda-qchem/tda-qchem-explorations/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/visgrid_cube_128/jby.inp)), and 
-    the "z"-direction ([jbz.inp](https://github.com/tda-qchem/tda-qchem-explorations/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/visgrid_cube_128/jbz.inp))
+    the "x"-direction ([jbx.inp](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/visgrid_cube_128/jbx.inp)), 
+    the "y"-direction ([jby.inp](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/visgrid_cube_128/jby.inp)), and 
+    the "z"-direction ([jbz.inp](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/visgrid_cube_128/jbz.inp))
 * Inputs for calculations of the components of the gradient of the MICD tensor, composed of the elements of the gradient of the current density vector induced by the magnetic field applied in 
-    the "x"-direction ([gradjbx.inp](https://github.com/tda-qchem/tda-qchem-explorations/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/visgrid_cube_128/gradjbx.inp)), 
-    the "y"-direction ([gradjby.inp](https://github.com/tda-qchem/tda-qchem-explorations/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/visgrid_cube_128/gradjby.inp)), and 
-    the "z"-direction ([gradjbz.inp](https://github.com/tda-qchem/tda-qchem-explorations/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/visgrid_cube_128/gradjbz.inp))
+    the "x"-direction ([gradjbx.inp](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/visgrid_cube_128/gradjbx.inp)), 
+    the "y"-direction ([gradjby.inp](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/visgrid_cube_128/gradjby.inp)), and 
+    the "z"-direction ([gradjbz.inp](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/visgrid_cube_128/gradjbz.inp))
 
 ### Outputs
 
 * Files with exported elements of the MICD tensor and its gradient on a grid in TXT format; these are also available on [zenodo](https://zenodo.org/record/7446735#.Y8BlkNKE4XU).
-* DIRAC output files, available in [the repository](https://github.com/tda-qchem/tda-qchem-explorations/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/outputs) and on [zenodo](https://zenodo.org/record/7446735#.Y8BlkNKE4XU).
+* DIRAC output files, available in [the repository](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/outputs) and on [zenodo](https://zenodo.org/record/7446735#.Y8BlkNKE4XU).
 
 ### Execution
 
@@ -120,27 +120,27 @@ pam --inp=$inp_rsp --mol=$mol --incmo --get="DFCOEF=DFCOEF.smb TBMO PAMXVC"
 
 ### Inputs
 
-* It may help to mark the positions of the Li and H nuclei on the plots; for this purpose, the molecular geometry of the LiH molecule in CSV format (in atomic units) is available in the [LiH.csv](https://github.com/tda-qchem/tda-qchem-explorations/tree/main/data/LiH_MICD/LiH.csv) file.
+* It may help to mark the positions of the Li and H nuclei on the plots; for this purpose, the molecular geometry of the LiH molecule in CSV format (in atomic units) is available in the [LiH.csv](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/LiH.csv) file.
 
 * MICD-related data in VTI format:
 
-    * Omega function derived from the magnetically-induced current density vector corresponding to the perturbation of the magnetic field applied perpendicularly to the Li-H bond: `start_data_omega_bz.vti` file in [the repository](https://github.com/tda-qchem/tda-qchem-explorations/tree/main/data/LiH_MICD/vti/start_data_omega_bz.vti) and on [zenodo](https://zenodo.org/record/7446735#.Y8E2dtKZNhF); data description:
+    * Omega function derived from the magnetically-induced current density vector corresponding to the perturbation of the magnetic field applied perpendicularly to the Li-H bond: `start_data_omega_bz.vti` file in [the repository](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/vti/start_data_omega_bz.vti) and on [zenodo](https://zenodo.org/record/7446735#.Y8E2dtKZNhF); data description:
         * *omega_bz* - corresponds to Omega function calculated for the magnetic field applied perpendicularly to the Li-H bond ("bz");
         * *bz_wz* - corresponds to the "z"-component of the curl of the current density vector induced by the magnetic field applied perpendicularly to the Li-H bond ("bz"); it is a zz-component of the vorticity tensor.
 
-    * The elements of the magnetically-induced current density vector corresponding to the perturbation of the magnetic field applied perpendicularly to the Li-H bond are on the `start_data_bz.vti` file in [the repository](https://github.com/tda-qchem/tda-qchem-explorations/tree/main/data/LiH_MICD/vti/start_data_bz.vti) and on [zenodo](https://zenodo.org/record/7446735#.Y8E2dtKZNhF); the "x"/"y"/"z" elements of this vector are marked as  `bz_jx`, `bz_jy`, `bz_jz`, respectively.
+    * The elements of the magnetically-induced current density vector corresponding to the perturbation of the magnetic field applied perpendicularly to the Li-H bond are on the `start_data_bz.vti` file in [the repository](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/vti/start_data_bz.vti) and on [zenodo](https://zenodo.org/record/7446735#.Y8E2dtKZNhF); the "x"/"y"/"z" elements of this vector are marked as  `bz_jx`, `bz_jy`, `bz_jz`, respectively.
 
     * Additionally, on [zenodo](https://zenodo.org/record/7446735#.Y8E2dtKZNhF), we also share the VTI file which contains all the elements of the full MICD tensor (`startdatajbtensor.vti` file).
     
 
 ### Outputs
 
-* The Paraview state files and all other files enabling the reproduction of the above screenshot and all images attached to the companion publication are in [the repository](https://github.com/tda-qchem/tda-qchem-explorations/tree/main/pvsm).
+* The Paraview state files and all other files enabling the reproduction of the above screenshot and all images attached to the companion publication are in [the repository](https://github.com/tda-qchem/tda-qchem-examples/tree/main/pvsm).
 
 
 ### ParaView
 
-To reproduce the images and to explore the TDA pipeline, go to the root directory of [this repository](https://github.com/tda-qchem/tda-qchem-explorations) and enter the following command:
+To reproduce the images and to explore the TDA pipeline, go to the root directory of [this repository](https://github.com/tda-qchem/tda-qchem-examples) and enter the following command:
 
 ``` bash
 paraview --state=pvsm/lih.pvsm
