@@ -19,11 +19,11 @@ theme:
       display.background_color: grey
       background-color: grey
   features:
+    - content.code.copy
     #- navigation.expand
     #- navigation.top
     #- toc.follow
     #- toc.integrate
-
 
 markdown_extensions:
     - attr_list
