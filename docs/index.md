@@ -1,4 +1,4 @@
-# Description
+# Welcome to the TDA-QCHEM Examples!
 
 This website collects examples of TDA applications to Quantum Chemistry. It is a scratch repository for generating examples discussed in the TDA-QCHEM book.
 

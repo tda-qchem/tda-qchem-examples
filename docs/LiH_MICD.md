@@ -133,12 +133,6 @@ pam --inp=$inp_prp --mol=$mol --incmo --get="DFCOEF=DFCOEF.smb TBMO PAMXVC"
 
     * Additionally, on [zenodo](https://zenodo.org/record/7446735#.Y8E2dtKZNhF), we also share the VTI file which contains all the elements of the full MICD tensor (`startdatajbtensor.vti` file).
     
-
-### Outputs
-
-* The `Paraview` state files and all other files enabling the reproduction of the above screenshot and all images attached to the companion publication are in [the repository](https://github.com/tda-qchem/tda-qchem-examples/tree/main/pvsm).
-
-
 ### ParaView
 
 To reproduce the images and to explore the TDA pipeline, go to the root directory of [this repository](https://github.com/tda-qchem/tda-qchem-examples) and enter the following command:
@@ -146,6 +140,25 @@ To reproduce the images and to explore the TDA pipeline, go to the root director
 ``` bash
 paraview --state=pvsm/lih.pvsm
 ```
+
+### Python code
+The following Python code reproduces this analysis pipeline in batch mode.
+
+``` python  linenums="1"
+--8<-- "python/lih.py"
+```
+
+To run the above Python script, go to the root directory of 
+[this repository](https://github.com/tda-qchem/tda-qchem-examples) and enter the following command:
+
+``` bash
+pvpython python/lih.py
+```
+
+### Outputs
+- `axialVortex.vtu`: the geometry of the axial vortex in VTU file format (to be
+  visualized with ParaView, change the extension to `csv` instead of `vtu` in the above script to export to an ASCII file instead).
+- `toroidalVortex.vtu`: the geometry of the toroidal vortex in VTU file format (to be visualized with ParaView, change the extension to `csv` instead of `vtu` in the above script to export to an ASCII file instead).
 
 ## Resources and additional information
 

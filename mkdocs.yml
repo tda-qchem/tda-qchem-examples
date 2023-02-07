@@ -6,9 +6,9 @@ site_url: https://github.com/tda-qchem/tda-qchem-examples/tree/main/
 docs_dir: docs
 site_dir: build
 
-nav:
-    - Home: index.md
-    - About: README.md
+#nav:
+    #- Home: index.md
+    #- About: README.md
 
 theme:
   name: material
