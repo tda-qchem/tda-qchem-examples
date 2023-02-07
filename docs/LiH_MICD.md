@@ -1,13 +1,13 @@
 # Vortices in the magnetically-induced current density in LiH molecule studied through the lens of the Omega function
 
 
-| ![Omega_bz.png](screenshots/LiH_MICD/repImageGray.png){width=500} | 
+| ![Omega_bz.png](screenshots/LiH_MICD/repImageGray.jpg)| 
 |:-:|
 |<div style="width:500px"><b>An automatic approach based on Topological Data Analysis extracts axial (blue) and toroidal (green) vortices in magnetically-induced current density as specific sub-sets of the separatrices (gray curves) of the Morse-Smale complex of the Omega index.</b></div>|
 
 ## Pipeline description
 
-This example illustrates (1) the calculation of the magnetically-induced current density (MICD) tensor in the LiH molecule in the `DIRAC` software, followed by (2) the calculation of the Omega index with the `qcten` script and (3) its subsequent topological analysis in the `TTK` software.
+This example illustrates (1) the calculation of the magnetically-induced current density (MICD) tensor in the LiH molecule in the [DIRAC](http://www.diracprogram.org/) software, followed by (2) the calculation of the Omega index with the `qcten` script and (3) its subsequent topological analysis in the [TTK](https://topology-tool-kit.github.io/) software.
 
 
 
@@ -15,11 +15,11 @@ The first step involving quantum chemistry calculations aims to compute the MICD
 
 
 
-The purpose of the second step is a pointwise derivation of a scalar function from these tensor fields. In this case, the studied scalar field represents the so-called Omega index, used as an indicator of vortices in the first-order current density field. This step also involves translating data exported from `DIRAC` in TXT to the VTI format favored by the `TTK` code. Simultaneously, it applies the resampling filter ("ResampleToImage") without changing the number of grid points or grid bounds.
+The purpose of the second step is a pointwise derivation of a scalar function from these tensor fields. In this case, the studied scalar field represents the so-called Omega index, used as an indicator of vortices in the first-order current density field. This step also involves translating data exported from [DIRAC](http://www.diracprogram.org/) in TXT to the VTI format favored by the [TTK](https://topology-tool-kit.github.io/) code. Simultaneously, it applies the resampling filter ("ResampleToImage") without changing the number of grid points or grid bounds.
 
 
 
-The final step involves analyzing the Omega scalar field in the `TTK` software. It starts with extracting all critical point pairs, determining a persistence threshold for the salient pairs, and using this threshold to simplify the topology of the Omega scalar field. Then, the computation of the Morse-Smale complex of such simplified field results, among others, in the extraction of its one-dimensional separatrices. A subset of these separatrices connecting 2-saddles and maxima well captures the center lines of vortices. These can then be associated with axial and toroidal vortices in the MICD of the LiH molecule. Notable `TTK` filters employed in this analysis are the `PersistenceDiagram`, `TopologicalSimplification`, `MorseSmaleComplex`, and `PersistentGenerators`.
+The final step involves analyzing the Omega scalar field in the [TTK](https://topology-tool-kit.github.io/) software. It starts with extracting all critical point pairs, determining a persistence threshold for the salient pairs, and using this threshold to simplify the topology of the Omega scalar field. Then, the computation of the Morse-Smale complex of such simplified field results, among others, in the extraction of its one-dimensional separatrices. A subset of these separatrices connecting 2-saddles and maxima well captures the center lines of vortices. These can then be associated with axial and toroidal vortices in the MICD of the LiH molecule. Notable [TTK](https://topology-tool-kit.github.io/) filters employed in this analysis are the `PersistenceDiagram`, `TopologicalSimplification`, `MorseSmaleComplex`, and `PersistentGenerators`.
 
 
 
@@ -35,10 +35,10 @@ Below, we describe these three steps in more detail.
 
 The experimental geometry of LiH molecule from the [NIST database](https://cccbdb.nist.gov/exp2x.asp?casno=7580678&charge=0#NISTdiatomic and https://www.nist.gov/pml/diatomic-spectral-database) was used (R(Li-H) = 1.595 Angstrom).
 
-The MICD tensor and its gradient were calculated analytically in the development version of the `DIRAC` software (commit hash `2330f11`) with the Dirac-Coulomb Hamiltonian, the B3LYP exchange-correlation functional, and the def-TZVP basis set applied for both atoms. London atomic orbitals and the simple magnetic balance scheme were applied in response calculations. The densities were exported on the cube grid of 128 points in each Cartesian direction using the default visualization options in `DIRAC`.
+The MICD tensor and its gradient were calculated analytically in the development version of the [DIRAC](http://www.diracprogram.org/) software (commit hash `2330f11`) with the Dirac-Coulomb Hamiltonian, the B3LYP exchange-correlation functional, and the def-TZVP basis set applied for both atoms. London atomic orbitals and the simple magnetic balance scheme were applied in response calculations. The densities were exported on the cube grid of 128 points in each Cartesian direction using the default visualization options in [DIRAC](http://www.diracprogram.org/).
 
 
-### `DIRAC` inputs
+### [DIRAC](http://www.diracprogram.org/) inputs
 
 * Molecular geometry of LiH molecule in XYZ format (in Angstrom): [LiH.xyz](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/LiH.xyz)
 * Input for a wave function optimization: [scf.inp](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/scf.inp)
@@ -52,14 +52,14 @@ The MICD tensor and its gradient were calculated analytically in the development
     the "y"-direction ([gradjby.inp](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/visgrid_cube_128/gradjby.inp)), and 
     the "z"-direction ([gradjbz.inp](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/inputs/visgrid_cube_128/gradjbz.inp))
 
-### `DIRAC` outputs
+### [DIRAC](http://www.diracprogram.org/) outputs
 
 * Files with exported elements of the MICD tensor and its gradient on a grid in TXT format; these are also available on [zenodo](https://zenodo.org/record/7446735#.Y8BlkNKE4XU).
-* `DIRAC` text output files, available in [the repository](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/outputs) and on [zenodo](https://zenodo.org/record/7446735#.Y8BlkNKE4XU).
+* [DIRAC](http://www.diracprogram.org/) text output files, available in [the repository](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/outputs) and on [zenodo](https://zenodo.org/record/7446735#.Y8BlkNKE4XU).
 
 ### Execution
 
-* Below, we assume that the `pam` script of `DIRAC` is available in `$PATH`.
+* Below, we assume that the `pam` script of [DIRAC](http://www.diracprogram.org/) is available in `$PATH`.
 
 * Step 1. Wave function optimization:
 
@@ -106,12 +106,12 @@ pam --inp=$inp_prp --mol=$mol --incmo --get="DFCOEF=DFCOEF.smb TBMO PAMXVC"
 
 ### Inputs
 
-* Data exported from `DIRAC`:
+* Data exported from [DIRAC](http://www.diracprogram.org/):
     * The "x"/"y"/"z" elements of the current density vector field induced by the magnetic field applied in the "x" direction are in the 4th/5th/6th-column of the `jbx.txt` file.
     * The "x"/"y"/"z" elements of the current density vector field induced by the magnetic field applied in the "y" direction are in the 4th/5th/6th-column of the `jby.txt` file.
     * The "x"/"y"/"z" elements of the current density vector field induced by the magnetic field applied in the "z" direction are in the 4th/5th/6th-column of the `jbz.txt` file.
     * The "x"/"y"/"z" elements of the gradient of the current density vector field induced by the magnetic field applied in the "z" direction are in the `gradjbx.txt` file, starting from the 4th column).
-    * In all TXT files exported from `DIRAC`, first three columns refer to the "x"/"y"/"z"-coordinates of grid vertices.
+    * In all TXT files exported from [DIRAC](http://www.diracprogram.org/), first three columns refer to the "x"/"y"/"z"-coordinates of grid vertices.
 
 ### Outputs
 ### Run script
