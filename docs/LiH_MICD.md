@@ -142,7 +142,7 @@ paraview --state=pvsm/lih.pvsm
 ```
 
 ### Python code
-The following Python code reproduces this analysis pipeline in batch mode.
+The following Python code reproduces the main analysis pipeline in batch mode.
 
 ``` python  linenums="1"
 --8<-- "python/lih.py"
@@ -156,6 +156,8 @@ pvpython python/lih.py
 ```
 
 ### Outputs
+The above Python script produces the following outputs:
+
 - `axialVortex.vtu`: the geometry of the axial vortex in VTU file format (to be
   visualized with ParaView, change the extension to `csv` instead of `vtu` in the above script to export to an ASCII file instead).
 - `toroidalVortex.vtu`: the geometry of the toroidal vortex in VTU file format (to be visualized with ParaView, change the extension to `csv` instead of `vtu` in the above script to export to an ASCII file instead).
