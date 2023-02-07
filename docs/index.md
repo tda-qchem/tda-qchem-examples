@@ -13,16 +13,15 @@ Each example includes:
 * links to quantum chemistry software and TTK documentation
 
 
-# Prerequisites
+## Prerequisites
 
 These examples assume a default installation of DIRAC, TTK and QCTEN. 
 
 
 
-# List of examples
+## List of examples
 
 
-[The magnetically-induced current density in LiH molecule studied with the Omega function](LiH_MICD/)
-
-
-
+| Name | Screenshot |
+|:-:|:-:|
+|[The magnetically-induced current density in LiH molecule studied with the Omega function](LiH_MICD/)|![ExampleImage](screenshots/LiH_MICD/paraviewScreenShot.png)|

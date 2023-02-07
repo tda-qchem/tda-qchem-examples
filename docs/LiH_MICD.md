@@ -5,8 +5,7 @@
 |:-:|
 |<div style="width:500px"><b>An automatic approach based on Topological Data Analysis extracts axial (blue) and toroidal (green) vortices in magnetically-induced current density as specific sub-sets of the separatrices (gray curves) of the Morse-Smale complex of the Omega index.</b></div>|
 
-
-# Pipeline description
+## Pipeline description
 
 This example illustrates (1) the calculation of the magnetically-induced current density (MICD) tensor in the LiH molecule in the `DIRAC` software, followed by (2) the calculation of the Omega index with the `qcten` script and (3) its subsequent topological analysis in the `TTK` software.
 
@@ -161,6 +160,3 @@ paraview --state=pvsm/lih.pvsm
 
 * To fully reproduce the results reported in the publication, please check [this link]().
 * To fully reproduce the publication, please check [this link]().
-
-
-
