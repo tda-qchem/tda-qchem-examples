@@ -43,7 +43,7 @@ tTKPersistentGenerators1.ScalarField = ['POINTS', 'oppositeOmega']
 threshold1 = Threshold(Input=tTKPersistentGenerators1)
 threshold1.Scalars = ['CELLS', 'Persistence']
 threshold1.LowerThreshold = 0.5
-threshold1.UpperThreshold = 0.8493308367608376
+threshold1.UpperThreshold = 9999999
 
 SaveData("axialVortex.vtu", threshold3)
 SaveData("toroidalVortex.vtu", threshold1)
