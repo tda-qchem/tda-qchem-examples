@@ -3,6 +3,7 @@ site_description: >-
     A collection of examples accompanying the TDA-Qchem book (scratch repository).
 site_author: Gosia Olejniczak, Julien Tierny
 site_url: https://github.com/tda-qchem/tda-qchem-examples/tree/main/
+repo_url: https://github.com/tda-qchem/tda-qchem-examples
 docs_dir: docs
 site_dir: build
 
@@ -18,6 +19,8 @@ theme:
       accent: teal
       display.background_color: grey
       background-color: grey
+  icon:
+    repo: fontawesome/brands/github
   features:
     - content.code.copy
     #- navigation.expand
