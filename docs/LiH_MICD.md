@@ -7,7 +7,7 @@
 
 ## Pipeline description
 
-This example illustrates (1) the calculation of the magnetically-induced current density (MICD) tensor in the LiH molecule in the [DIRAC](http://www.diracprogram.org/) software, followed by (2) the calculation of the Omega index with the `qcten` script and (3) its subsequent topological analysis in the [TTK](https://topology-tool-kit.github.io/) software.
+This example illustrates (1) the calculation of the magnetically-induced current density (MICD) tensor in the LiH molecule in the [DIRAC](http://www.diracprogram.org/) software, followed by (2) the calculation of the Omega index with the [qcten](https://github.com/gosiao/qcten) script and (3) its subsequent topological analysis in the [TTK](https://topology-tool-kit.github.io/) software.
 
 
 
@@ -23,7 +23,7 @@ The final step involves analyzing the Omega scalar field in the [TTK](https://to
 
 
 
-For more details on this analysis, please see the publication [on arXiv](https://arxiv.org/abs/2212.08690). All data files generated in this analysis are on [zenodo](https://zenodo.org/record/7446735#.Y8BlkNKE4XU). All links are [at the bottom of this page](#resources-and-additional-information).
+For more details on this analysis, please see the publication [on arXiv](https://arxiv.org/abs/2212.08690). All data files generated in this analysis are on [zenodo](https://doi.org/10.5281/zenodo.8223992). All links are [at the bottom of this page](#resources-and-additional-information).
 
 Below, we describe these three steps in more detail.
 
@@ -54,8 +54,8 @@ The MICD tensor and its gradient were calculated analytically in the development
 
 ### [DIRAC](http://www.diracprogram.org/) outputs
 
-* Files with exported elements of the MICD tensor and its gradient on a grid in TXT format; these are also available on [zenodo](https://zenodo.org/record/7446735#.Y8BlkNKE4XU).
-* [DIRAC](http://www.diracprogram.org/) text output files, available in [the repository](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/outputs) and on [zenodo](https://zenodo.org/record/7446735#.Y8BlkNKE4XU).
+* Files with exported elements of the MICD tensor and its gradient on a grid in TXT format; these are also available on [zenodo](https://doi.org/10.5281/zenodo.8223992).
+* [DIRAC](http://www.diracprogram.org/) text output files, available in [the repository](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/dirac/dc_b3lyp_def2tzvp/outputs) and on [zenodo](https://doi.org/10.5281/zenodo.8223992).
 
 ### Execution
 
@@ -113,8 +113,18 @@ pam --inp=$inp_prp --mol=$mol --incmo --get="DFCOEF=DFCOEF.smb TBMO PAMXVC"
     * The "x"/"y"/"z" elements of the gradient of the current density vector field induced by the magnetic field applied in the "z" direction are in the `gradjbx.txt` file, starting from the 4th column).
     * In all TXT files exported from [DIRAC](http://www.diracprogram.org/), first three columns refer to the "x"/"y"/"z"-coordinates of grid vertices.
 
-### Outputs
-### Run script
+### Execution
+
+* Below, we assume that the conda environment with `qcten` installed (see Installation instructions to [qcten](https://github.com/gosiao/qcten/blob/main/README.md)) is activated. In this guilde, we use the `qcten_env` name for this environment. The `qcten` script calculates the Omega function from the DIRAC data (here: available in raw text files) and exports it in the VTI format.
+  To reproduce this step:
+
+  * prepare the run script and the input file for `qcten` (sample `run.py` and `bz_omega_wz.inp` are available on [zenodo](https://doi.org/10.5281/zenodo.8223992)).
+  * if needed, adapt the paths to DIRAC data (`jb*.txt` and `gradjb*.txt` files) in the input file, and execute `python run.py`
+  * analogous computations can be done on data corresponding to the perturbing magnetic field applied in the "x"- and "y"-directions (to get the Omega function for the "Bx" and "By" fields)
+
+### Outputs and workflow
+
+The above Python script produces the `start_data_omega_bz.vti` file, which can also be found in [the repository](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/vti/start_data_omega_bz.vti) and on [zenodo](https://doi.org/10.5281/zenodo.8223992). 
 
 
 ## Topological Data Analysis
@@ -125,13 +135,13 @@ pam --inp=$inp_prp --mol=$mol --incmo --get="DFCOEF=DFCOEF.smb TBMO PAMXVC"
 
 * MICD-related data in VTI format:
 
-    * Omega function derived from the magnetically-induced current density vector corresponding to the perturbation of the magnetic field applied perpendicularly to the Li-H bond: `start_data_omega_bz.vti` file in [the repository](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/vti/start_data_omega_bz.vti) and on [zenodo](https://zenodo.org/record/7446735#.Y8E2dtKZNhF); data description:
+    * Omega function derived from the magnetically-induced current density vector corresponding to the perturbation of the magnetic field applied perpendicularly to the Li-H bond: `start_data_omega_bz.vti` file in [the repository](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/vti/start_data_omega_bz.vti) and on [zenodo](https://doi.org/10.5281/zenodo.8223992); data description:
         * `omega_bz` - corresponds to Omega function calculated for the magnetic field applied perpendicularly to the Li-H bond ("bz");
         * `bz_wz` - corresponds to the "z"-component of the curl of the current density vector induced by the magnetic field applied perpendicularly to the Li-H bond ("bz"); it is a zz-component of the vorticity tensor.
 
-    * The elements of the magnetically-induced current density vector corresponding to the perturbation of the magnetic field applied perpendicularly to the Li-H bond are on the `start_data_bz.vti` file in [the repository](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/vti/start_data_bz.vti) and on [zenodo](https://zenodo.org/record/7446735#.Y8E2dtKZNhF); the "x"/"y"/"z" elements of this vector are marked as  `bz_jx`, `bz_jy`, `bz_jz`, respectively.
+    * The elements of the magnetically-induced current density vector corresponding to the perturbation of the magnetic field applied perpendicularly to the Li-H bond are on the `start_data_bz.vti` file in [the repository](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/vti/start_data_bz.vti) and on [zenodo](https://doi.org/10.5281/zenodo.8223992); the "x"/"y"/"z" elements of this vector are marked as  `bz_jx`, `bz_jy`, `bz_jz`, respectively.
 
-    * Additionally, on [zenodo](https://zenodo.org/record/7446735#.Y8E2dtKZNhF), we also share the VTI file which contains all the elements of the full MICD tensor (`startdatajbtensor.vti` file).
+    * Additionally, on [zenodo](https://doi.org/10.5281/zenodo.8223992), we also share the VTI file which contains all the elements of the full MICD tensor (`start_data_jb_tensor.vti` file).
     
 ### ParaView
 
@@ -167,11 +177,11 @@ The above Python script produces the following outputs:
 * [Prerequisites](https://tda-qchem.github.io/tda-qchem-examples/)
 * [DIRAC](http://www.diracprogram.org/)
 * [TTK](https://topology-tool-kit.github.io/)
-* [qcten]()
+* [qcten](https://github.com/gosiao/qcten)
 
 * The calculations and export of the magnetically-induced current density are also discusssed in [the official DIRAC tutorial](http://www.diracprogram.org/doc/release-22/tutorials/visual/general/tutorial.html#densities-and-currents-induced-by-a-magnetic-field).
 
-* Related data: the publication on [arXiv](https://arxiv.org/abs/2212.08690) and its [1-page summary](), data files generated in this analysis on [zenodo](https://zenodo.org/record/7446735#.Y8BlkNKE4XU).
+* Related data: the publication on [arXiv](https://arxiv.org/abs/2212.08690) and its [1-page summary](), data files generated in this analysis on [zenodo](https://doi.org/10.5281/zenodo.8223992).
 
 * To fully reproduce the results reported in the publication, please check [this link]().
 * To fully reproduce the publication, please check [this link]().

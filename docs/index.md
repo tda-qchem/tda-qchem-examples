@@ -15,7 +15,7 @@ Each example includes:
 
 ## Prerequisites
 
-These examples assume a default installation of [DIRAC](http://www.diracprogram.org/), [TTK](https://topology-tool-kit.github.io/) and QCTEN. 
+These examples assume a default installation of [DIRAC](http://www.diracprogram.org/), [TTK](https://topology-tool-kit.github.io/) and [qcten](https://github.com/gosiao/qcten).
 
 
 
