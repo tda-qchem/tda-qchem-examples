@@ -122,7 +122,7 @@ pam --inp=$inp_prp --mol=$mol --incmo --get="DFCOEF=DFCOEF.smb TBMO PAMXVC"
   * if needed, adapt the paths to DIRAC data (`jb*.txt` and `gradjb*.txt` files) in the input file, and execute `python run.py`
   * analogous computations can be done on data corresponding to the perturbing magnetic field applied in the "x"- and "y"-directions (to get the Omega function for the "Bx" and "By" fields)
 
-### Outputs and workflow
+### Outputs
 
 The above Python script produces the `start_data_omega_bz.vti` file, which can also be found in [the repository](https://github.com/tda-qchem/tda-qchem-examples/tree/main/data/LiH_MICD/vti/start_data_omega_bz.vti) and on [zenodo](https://doi.org/10.5281/zenodo.8223992). 
 
