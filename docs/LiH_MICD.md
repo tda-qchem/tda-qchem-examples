@@ -7,7 +7,7 @@
 
 ## Pipeline description
 
-This example illustrates (1) the calculation of the magnetically-induced current density (MICD) tensor in the LiH molecule in the [DIRAC](http://www.diracprogram.org/) software, followed by (2) the calculation of the Omega index with the [qcten](https://github.com/gosiao/qcten) script and (3) its subsequent topological analysis in the [TTK](https://topology-tool-kit.github.io/) software.
+This example illustrates (1) the calculation of the magnetically-induced current density (MICD) tensor in the LiH molecule in the [DIRAC](http://www.diracprogram.org/) software, followed by (2) the calculation of the Omega index with the [qcten](https://github.com/gosiao/qcten) script (version `1c6231e`) and (3) its subsequent topological analysis in the [TTK](https://topology-tool-kit.github.io/) software.
 
 
 
